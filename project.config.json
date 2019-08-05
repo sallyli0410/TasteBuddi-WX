@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -75,6 +75,26 @@
 					"name": "Profile",
 					"pathName": "pages/profile/profile",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "My Orders",
+					"pathName": "pages/my_orders/my_orders",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "My Purchases",
+					"pathName": "pages/my_purchases/my_purchases",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "My Products",
+					"pathName": "pages/my_products/my_products",
 					"scene": null
 				}
 			]

@@ -71,7 +71,7 @@ Page({
     //   url: `/pages/show/show?productId=${id}`
     // })
     wx.navigateTo({
-      url: 'pages/my_products/my_products',
+      url: '../my_products/my_products',
     })
   },
 
@@ -84,7 +84,7 @@ Page({
     // })
 
     wx.navigateTo({
-      url:'pages/my_orders/my_orders',
+      url:'../my_orders/my_orders',
     })
   },
 
@@ -95,7 +95,7 @@ Page({
     //   url: `/pages/show/show?productId=${id}`
     // })
     wx.navigateTo({
-      url: 'pages/my_purchases/my_purchases',
+      url: '../my_purchases/my_purchases',
     })
   },
 })

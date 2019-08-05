@@ -1,8 +1,11 @@
 @import 'stylesheets/fonts.wxss';
 @import 'stylesheets/buttons.wxss';
-@import 'stylesheets/product-card.wxss';
+@import 'stylesheets/avatar.wxss';
+@import 'stylesheets/white-card.wxss';
 @import 'stylesheets/hero-slider.wxss';
 @import 'stylesheets/date-picker.wxss';
+@import 'stylesheets/yellow-card.wxss';
+
 
 
 /**app.wxss**/
