@@ -1,0 +1,26 @@
+/* pages/show/show.wxss */
+
+/* Sections */
+.section{
+  display:flex;
+  flex-direction: column;
+  margin: 30rpx 0rpx;
+}
+/* Seller Card */
+.seller-card {
+  width:90%;
+  height:150rpx;
+  padding:30rpx;
+  overflow: hidden;
+  background: #FBF1D4;
+  display: flex;
+  align-items: center;
+  border-radius: 10rpx;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 100%;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}

@@ -1,0 +1,12 @@
+.date-picker {
+  background-color: white;
+  color: #4aa3ad;
+  border: 4rpx solid #4aa3ad;
+  border-radius: 5px;
+  height: 5vh;
+  padding: 15rpx;
+}
+
+.date {
+  line-height: 5vh;
+}

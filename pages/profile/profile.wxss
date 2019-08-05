@@ -1,0 +1,32 @@
+/* pages/profile/profile.wxss */
+
+.user-details {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60rpx;
+}
+
+.avatar-large {
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  margin-bottom: 2%;
+  color: black;
+}
+
+.tab-section {
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4rpx solid #EDC752;
+  padding:20rpx 0rpx;
+}
+
+.chevron-icon {
+  height: 30rpx;
+  width: 30rpx;
+
+}
