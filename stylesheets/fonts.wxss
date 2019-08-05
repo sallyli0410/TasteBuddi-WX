@@ -1,15 +1,28 @@
 .h1{
-  font-size: 60rpx;
+  font-size:60rpx;
   font-weight:bold;
-  font-family: Roboto;
 }
 
 .h2{
-  font-size: 34rpx;
-  font-family: Roboto;
+  font-size:43rpx;
+  font-weight:bold;
 }
 
-.p {
-  font-size: 26rpx;
-  font-family: Roboto;
+.h2-blue{
+  font-size:43rpx;
+  font-weight:bold;
+  color:#4AA3AD;
+
 }
+
+.h2-yellow{
+  font-size:43rpx;
+  font-weight:bold;
+  color:#EDC752;
+
+}
+
+.p{
+  font-size:28rpx;
+}
+

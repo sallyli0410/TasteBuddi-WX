@@ -1,14 +1,41 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "stylesheets/buttons.wxss"
+    "pages/home/home",
+    "pages/marketplace/marketplace",
+    "pages/show/show",
+    "pages/seller/seller",
+    "pages/profile/profile",
+    "pages/my_products/my_products",
+    "pages/my_orders/my_orders",
+    "pages/my_purchases/my_purchases",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Taste Buddi",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#ffffff",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#EDC752",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/marketplace/marketplace",
+        "text": "Marketplace"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "Profile"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

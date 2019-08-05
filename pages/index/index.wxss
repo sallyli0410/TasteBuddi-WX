@@ -6,8 +6,13 @@
   flex-direction: column;
   align-items: center;
   text-align:center;
-  padding: 30rpx 30rpx;s
+  padding: 30rpx 30rpx;
   justify-content: space-between;
   box-sizing: border-box;
+}
+
+.content{
+  flex-direction: column;
+  display:flex;  
 }
 

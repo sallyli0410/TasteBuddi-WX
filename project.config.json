@@ -31,13 +31,53 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "Landing Page",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Marketplace",
+					"pathName": "pages/marketplace/marketplace",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Product",
+					"pathName": "pages/show/show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Profile",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				}
+			]
 		}
 	}
 }

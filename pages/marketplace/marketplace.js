@@ -1,4 +1,4 @@
-// stylesheets/buttons.wxss.js
+// pages/marketplace/marketplace.js
 Page({
 
   /**
@@ -12,6 +12,15 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+
+    let page = this
+    wx.request({
+      url: 'http://localhost:3000/api/v1/products',
+      success: function (res) {
+        console.log(res)
+        page.setData({ products: res.data.products })
+      }
+    })
 
   },
 
@@ -62,5 +71,15 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  goToShow: function (event) {
+    console.log(22, event)
+    // let id = event.currentTarget.dataset.id
+    // wx.navigateTo({
+    //   url: `/pages/show/show?productId=${id}`
+    // })
+    wx.navigateTo({
+      url: '/pages/show/show',
+    })
+  },
 })

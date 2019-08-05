@@ -1,0 +1,23 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+  <view class="user-details">
+    <image class="avatar-large" alt="avatar-large" src="{{avatar}}"></image>
+    <text class="h1">Hello {{name}}!</text>
+  </view>
+  <view class="tabs">
+    <view class="tab-section" bindtap="goToMyProducts">
+      <text class="h2">See all my products</text>
+      <image class="chevron-icon" src="/images/right-chevron.png"></image>
+    </view>
+    <view class="tab-section" bindtap="goToMyOrders">
+      <text class="h2">See all my orders</text>
+      <image class="chevron-icon" src="/images/right-chevron.png"></image>
+    </view>
+    <view class="tab-section" bindtap="goToMyPurchases">
+      <text class="h2">See all my purchases</text>
+      <image class="chevron-icon" src="/images/right-chevron.png"></image>
+    </view>
+    <view class="tab-section">
+    </view>
+  </view>
+</view>

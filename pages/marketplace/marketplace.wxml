@@ -1,0 +1,27 @@
+<!--pages/marketplace/marketplace.wxml-->
+<view class="container">
+
+  <!-- Search-Bar -->
+
+  <!-- filter -->
+
+  <!-- product-cards -->
+  <view class="cards-container">
+    <view class="card-product">
+      <!-- add in with api  wx:for="{{games}}" wx:for-item="game" data-item="{{game}}" -->
+      <image class="card-icon" src="/images/heart_filled.png" />
+      <image src="https://images.unsplash.com/photo-1499126167718-c87f5c1387e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" mode="aspectFill" />
+      <view data-id="{{game.id}}" class="card-product-infos" bindtap="goToShow">
+        <view class="content">
+          <view class="h2">Kale Pesto{{game.name}}</view>
+          <view class="p">Price{{game.description}}</view>
+          <view class="p">rating{{game.edition}}</view>
+        </view>
+        <view class="card-footer">
+          <view class="p">Distance{{game.edition}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,9 +1,14 @@
 /* stylesheets/buttons.wxss.wxss */
-.white-button{
-  font-weight: bold;
-  margin-top: 30rpx;
-  background: white;
-  color: black;
-  font-size: 43rpx;
-  width: 75%;
+
+.submit-button{
+  text-align: center;
+  color:white;
+  background-color: #4AA3AD;
+  border-radius: 5px;
+  height: 5vh;
+  padding: 15rpx;
+}
+
+.submit-button .h2{
+  line-height:5vh;
 }

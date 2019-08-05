@@ -2,9 +2,11 @@
 <view class="yellow-container">
  
 <text class="h1">Welcome to Taste Buddi</text>
+<view class="content">
 <text class="h1">Bring home authentic local flavors</text>
 <text class="p">Sign in to get started</text>
 <button class="white-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Sign In</button>
+</view>
 </view>
 
 
