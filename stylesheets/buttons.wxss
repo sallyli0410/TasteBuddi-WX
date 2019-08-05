@@ -1,0 +1,9 @@
+/* stylesheets/buttons.wxss.wxss */
+.white-button{
+  font-weight: bold;
+  margin-top: 30rpx;
+  background: white;
+  color: black;
+  font-size: 43rpx;
+  width: 75%;
+}

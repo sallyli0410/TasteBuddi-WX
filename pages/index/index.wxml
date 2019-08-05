@@ -1,13 +1,19 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
+<view class="yellow-container">
+ 
+<text class="h1">Welcome to Taste Buddi</text>
+<text class="h1">Bring home authentic local flavors</text>
+<text class="p">Sign in to get started</text>
+<button class="white-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Sign In</button>
+</view>
+
+
+
+<!-- User Login -->
+ <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+  </view> -->
