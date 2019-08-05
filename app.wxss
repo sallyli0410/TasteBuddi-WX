@@ -1,3 +1,6 @@
+@import 'stylesheets/fonts.wxss';
+@import 'stylesheets/buttons.wxss';
+
 /**app.wxss**/
 .container {
   height: 100%;
@@ -5,6 +8,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 30rpx 30rpx;
   box-sizing: border-box;
 } 
