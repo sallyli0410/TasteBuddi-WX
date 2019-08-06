@@ -1,4 +1,4 @@
-// search-box.js
+// search-bar.js
 Component({
   /**
    * Component properties

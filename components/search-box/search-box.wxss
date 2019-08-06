@@ -2,7 +2,7 @@
   height: 5vh;
   border-radius: 5vh;
   position: relative;
-  width: 80vw;
+  width: 70vw;
   border: 4rpx solid #E8E8E8;
 }
 
@@ -10,15 +10,15 @@
   height: 2.5vh;
   width: 2.5vh;
   position: absolute;
-  left: 5%;
+  left: 8%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
 .text-area {
-  width: 85%;
+  width: 80%;
   position: absolute;
-  left: 10%;
+  left: 15%;
   top: 50%;
   transform: translateY(-50%);
 }

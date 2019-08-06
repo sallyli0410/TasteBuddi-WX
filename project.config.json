@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 10,
 			"list": [
 				{
 					"id": 0,
@@ -106,9 +106,17 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 9,
 					"name": "Search-bar",
 					"pathName": "components/search-bar/search-bar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Searchbar",
+					"pathName": "components/search-bar/search-bar",
+					"query": "",
 					"scene": null
 				}
 			]

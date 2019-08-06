@@ -2,13 +2,11 @@
 .h1{
   font-size:60rpx;
   font-weight:bold;
-  font-family: 'Roboto';
 }
 
 .h2{
   font-size:43rpx;
   font-weight:bold;
-  font-family: 'Roboto';
 
 }
 
@@ -16,18 +14,14 @@
   font-size:43rpx;
   font-weight:bold;
   color:#4AA3AD;
-  font-family: 'Roboto';
 }
 
 .h2-yellow{
   font-size:43rpx;
   font-weight:bold;
   color:#EDC752;
-  font-family: 'Roboto';
 }
 
 .p{
-
   font-size:28rpx;
-
 }
