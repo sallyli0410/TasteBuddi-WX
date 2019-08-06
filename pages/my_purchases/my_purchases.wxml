@@ -1,6 +1,9 @@
 <!--pages/my_purchases/my_purchases.wxml-->
 <view class="container">
-<view class="h2">Here are all your purchases</view>
+  <view class="h2">Here are all your purchases</view>
+
+  <!-- Yellow product card -->
+  
   <view class="yellow-card">
     <view class="profile">
       <image class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
@@ -22,7 +25,7 @@
       </view>
     </view>
     <view class="response">
-   <text class="accept-tab p" bindtap="orderAccept">Cancel</text>
+      <text class="full-tab p" bindtap="cancel">Cancel</text>
     </view>
   </view>
 </view>

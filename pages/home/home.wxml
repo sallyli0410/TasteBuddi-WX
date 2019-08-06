@@ -1,5 +1,37 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
 
 
+<!-- Hero Image -->
+<view class='swipercontent'>
+  <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
 
+  <view class="dots">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+    </block>
+  </view>
+</view>
+
+<view class="container">
+  <!-- Recommendations -->
+  <view class="section">
+    <text class="h2-yellow">Your Recommendations</text>
+  </view>
+  <!-- Top Chefs -->
+  <view class="section">
+    <text class="h2-yellow">Top Chefs</text>
+    <view class="avatars"></view>
+  </view>
+    <!-- Top Chefs -->
+  <view class="section">
+    <text class="h2-yellow">Trending Products</text>
+  </view>
+
+
+</view>
