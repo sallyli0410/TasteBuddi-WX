@@ -135,4 +135,10 @@ Page({
     //   }
     // });
   },
+
+  swiperChange: function (e) {
+    this.setData({
+      swiperCurrent: e.detail.current
+    })
+  }
 })
