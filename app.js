@@ -1,5 +1,3 @@
-// var swiper = require("utils/swiper.js")
-
 //app.js
 App({
   onLaunch: function () {
@@ -35,8 +33,6 @@ App({
       }
     })
   },
-
-  // swiperChange();
   
   globalData: {
     userInfo: null

@@ -6,7 +6,7 @@
   <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
     <block wx:for="{{imgUrls}}" wx:key="unique">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" width="355" height="150" />
+        <image src="{{item}}" class="slide-image" width="355" height="150" mode="aspectFill" cropping="center"/>
       </swiper-item>
     </block>
   </swiper>
@@ -22,16 +22,19 @@
   <!-- Recommendations -->
   <view class="section">
     <text class="h2-yellow">Your Recommendations</text>
+    <image class="image-cards" alt="image-cards" src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" mode="aspectFill"/>
+    <!-- wx:for="{{ChefUrls}}" wx:for-item="chef" data-item="{{chef}}" -->
+
   </view>
   <!-- Top Chefs -->
   <view class="section">
     <text class="h2-yellow">Top Chefs</text>
-    <view class="avatars"></view>
+    <view class="avatars">
+      <image class="avatar-outline" alt="avatar" wx:for="{{ChefUrls}}" wx:for-item="chef" data-item="{{chef}}" src="{{chef}}" mode="aspectFill" cropping="center"/>
+    </view>
   </view>
-    <!-- Top Chefs -->
+  <!-- Top Chefs -->
   <view class="section">
     <text class="h2-yellow">Trending Products</text>
   </view>
-
-
 </view>
