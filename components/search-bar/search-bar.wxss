@@ -1,0 +1,16 @@
+.container {
+  flex-direction: row;
+  align-content: space-around;
+}
+
+.icon-box {
+  text-align: center;
+}
+
+.icon {
+  width: 5vw;
+  height: 5vw;
+}
+
+search-box {
+}
