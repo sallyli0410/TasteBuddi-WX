@@ -62,8 +62,13 @@
 flex-basis: 50%; 
 line-height:97rpx;
 }
+
 .decline-tab {
   border-left: 4rpx solid white;
   flex-basis: 50%;
   line-height:97rpx;
+}
+
+.full-tab {
+line-height:97rpx;
 }
