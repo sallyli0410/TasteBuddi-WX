@@ -4,7 +4,7 @@
   <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
     <block wx:for="{{imgUrls}}" wx:key="unique">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" width="355" height="150" />
+        <image src="{{item}}" class="slide-image" width="355" height="150" mode="aspectFill" />
       </swiper-item>
     </block>
   </swiper>
@@ -20,7 +20,7 @@
   <!-- Tags -->
   <!-- Seller -->
   <view class="seller-card" bindtap="goToSeller">
-    <image class="avatar" alt="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></image>
+    <image class="avatar" alt="avatar" mode="aspectFill" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
     <view class="seller-card-infos">
       <view class="name ">
         <!-- need to fetch data from wx request from user -->
@@ -54,6 +54,10 @@
       <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
         <text class="p date">XXXX{{date}}</text>
       </picker>
+    </view>
+    <view class="section">
+      <view class="h2-blue section-title">Quantity:</view>
+      <input class="blue-outline-input" name="quantity" placeholder="e.g 150g" />
     </view>
     <view class="section">
       <view class="submit-button">

@@ -1,6 +1,46 @@
 /* pages/home/home.wxss */
+
 .avatars {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
+
+.image-cards {
+  height: 250rpx;
+  width: 400rpx;
+  border-radius: 10rpx;
+  box-shadow: 0px 0px 15px #e8e8e8;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+/* These are for the approval: */
+
+/* .image-card{
+  height:400rpx;
+  width:100%;
+  border-radius: 10rpx;
+  margin-top:40rpx;
+  position:relative;
+}
+
+.image-card image{
+  height:100%;
+  width:100%;
+  border-radius: 10rpx;
+}
+
+.image-card-h2 {
+  position: absolute;
+  top:0;
+  font-size:43rpx;
+  text-shadow: 0px 0px 5px black;
+  font-weight:bold;
+  z-index:1;
+  color:white;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+} */

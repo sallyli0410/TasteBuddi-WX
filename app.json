@@ -26,11 +26,15 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "Home"
+        "text": "Home",
+        "iconPath": "images/home.png",
+        "selectedIconPath":"images/home-filled.png"
       },
       {
         "pagePath": "pages/marketplace/marketplace",
-        "text": "Marketplace"
+        "text": "Marketplace",
+        "iconPath": "images/shopping-basket.png",
+        "selectedIconPath": "images/shopping-basket-filled.png"
       },
       {
         "pagePath": "pages/profile/profile",

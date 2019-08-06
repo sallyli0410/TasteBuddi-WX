@@ -24,4 +24,9 @@
 
 .p{
   font-size:28rpx;
+
+  
+  font-family: 'Roboto';
+
 }
+
