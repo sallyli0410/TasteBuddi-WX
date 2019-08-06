@@ -1,0 +1,25 @@
+.search-box {
+  height: 5vh;
+  border-radius: 5vh;
+  position: relative;
+  width: 80vw;
+  border: 4rpx solid #E8E8E8;
+}
+
+.search-image {
+  height: 2.5vh;
+  width: 2.5vh;
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-area {
+  width: 85%;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
