@@ -5,6 +5,8 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    // <----------login function----------->
+    this.tologin()
 
     // 登录
     wx.login({
@@ -33,8 +35,24 @@ App({
       }
     })
   },
+
+  toLogin: function () {
+  const host = this.globalData.url;
+    wx.request({
+      url: host + 'login',
+      method: 'post',
+      data: {
+        code: res.code
+      },
+      success: (res) => {
+        console.log(res)
+        this.globalData.userId = res.data.userId
+      },
+    })
+  },
   
   globalData: {
-    userInfo: null
+    userInfo: null,
+    url: 'http://localhost:3000/api/v1/'
   }
 })
