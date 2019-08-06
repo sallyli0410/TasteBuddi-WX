@@ -1,6 +1,13 @@
 <!--pages/my_products/my_products.wxml-->
 <view class="container">
-<view class="h2">Here are all your products</view>
+<view class="h2">Here are all your recipes</view>
+
+<!-- Add product button -->
+<view class="section">
+<button class="yellow-outline-button h2" bindtap="addRecipe">Add a Recipe</button>
+</view>
+
+<!-- product cards -->
   <view class="yellow-card-short">
     <view class="yellow-card-product">
       <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" mode="aspectFill" />

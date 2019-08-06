@@ -12,3 +12,18 @@
 .submit-button .h2{
   line-height:5vh;
 }
+
+.yellow-outline-button {
+  height: 5vh;
+  width:100%;
+  text-align: center;
+  color: #EDC752;
+  border:4rpx solid #EDC752;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15rpx;
+}
+
+.yellow-outline-button .h2 {
+  line-height: 5vh;
+}

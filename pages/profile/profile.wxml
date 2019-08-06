@@ -1,7 +1,7 @@
 <!--pages/profile/profile.wxml-->
 <view class="container">
   <view class="user-details">
-    <image class="avatar-large" alt="avatar-large" src="{{avatar}}"></image>
+    <image class="avatar-large" alt="avatar-large" src="{{avatar}}" mode="aspectFill"></image>
     <text class="h1">Hello {{name}}!</text>
   </view>
   <view class="tabs">

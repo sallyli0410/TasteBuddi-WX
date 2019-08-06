@@ -17,6 +17,8 @@ Page({
     swiperCurrent: 0,
   },
 
+  
+
   /**
    * Lifecycle function--Called when page load
    */

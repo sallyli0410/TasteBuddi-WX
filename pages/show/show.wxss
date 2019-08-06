@@ -1,11 +1,6 @@
 /* pages/show/show.wxss */
 
-/* Sections */
-.section{
-  display:flex;
-  flex-direction: column;
-  margin: 30rpx 0rpx;
-}
+
 /* Seller Card */
 .seller-card {
   width:90%;

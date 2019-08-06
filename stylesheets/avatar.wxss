@@ -11,5 +11,5 @@
   flex-basis: 20%;
   height:130rpx;
   width:100%;
-  
+  border: 8rpx solid #4AA3AD;
 }

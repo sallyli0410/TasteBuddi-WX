@@ -5,10 +5,10 @@
 @import 'stylesheets/hero-slider.wxss';
 @import 'stylesheets/date-picker.wxss';
 @import 'stylesheets/yellow-card.wxss';
-
-
+@import 'stylesheets/input-fields.wxss';
 
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
@@ -17,4 +17,10 @@
   justify-content: space-between;
   padding: 30rpx 30rpx;
   box-sizing: border-box;
-} 
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx 0rpx;
+}
