@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="icon-box">
+    <image src="/images/chefs-toque.png" class="icon"/>
+    <text class="p">\nChef</text>
+  </view>
+
+  <search-box/>
+
+  <view class="icon-box">
+    <image src="/images/placeholder.png" class="icon"/>
+    <text class="p">\n上海</text>
+  </view>
+
+</view>
