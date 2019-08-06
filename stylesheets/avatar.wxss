@@ -5,3 +5,11 @@
   width:100%;
   margin-right:30rpx;
 }
+
+.avatar-outline {
+  border-radius: 50%;
+  flex-basis: 20%;
+  height:130rpx;
+  width:100%;
+  
+}

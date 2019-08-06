@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 9,
 			"list": [
 				{
 					"id": 0,
@@ -102,6 +102,13 @@
 					"id": -1,
 					"name": "star-rating",
 					"pathName": "components/star-rating/star-rating",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Show",
+					"pathName": "pages/show/show",
 					"scene": null
 				}
 			]
