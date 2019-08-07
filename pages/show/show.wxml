@@ -49,6 +49,8 @@
   <view class="section">
     <text class="h2-blue">Location</text>
   </view>
+  <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
+
   <!-- Purchase form -->
   <form bindsubmit="bindFormSubmit">
     <text class="h2-blue">Choose a pick up date:</text>
