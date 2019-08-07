@@ -6,7 +6,9 @@ Page({
    * Page initial data
    */
   data: {
-
+    num: 3.5,
+    one_1: '',
+    two_1: ''
   },
 
   /**
@@ -24,6 +26,13 @@ Page({
         })
       }
     })
+
+    this.setData({
+      one_1: this.data.num,
+      two_1: 5 - this.data.num
+    })
+
+  
 
   },
 

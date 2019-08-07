@@ -45,5 +45,13 @@
     ]
   },
 
+  
+  "permission": {
+    "scope.userLocation": {
+      "desc": "We need your location to calculate the distance between you and the sauces"
+    }
+  },
+
+
   "sitemapLocation": "sitemap.json"
 }

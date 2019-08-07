@@ -3,18 +3,28 @@
 
   <!-- Search-Bar -->
 
+
   <!-- filter -->
 
   <!-- product-cards -->
   <view class="cards-container">
     <view class="card-product" wx:for="{{products}}" wx:for-item="product" data-item="{{product}}">
       <image class="card-icon" src="/images/heart.png" />
-      <image src="https://images.unsplash.com/photo-1519623286359-e9f3cbef015b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" mode="aspectFill" />
+      <image src="{{product.img_url}}" mode="aspectFill" />
       <view data-id="{{product.id}}" class="card-product-infos" bindtap="goToShow">
         <view class="content">
-          <view class="h2">{{product.name}}</view>    
+          <view class="h2">{{product.name}}</view>
           <view class="p">Pricing: $40.00{{product.price}}</view>
-          <view class="p">Rating{{product.rating}}</view>
+          <view class="p">Rating{{rating}}
+            <view class="star-container">
+              <view wx:for="{{one_1}}">
+                <image class="star" src='/images/star-filled.png'></image>
+              </view>
+              <view wx:for="{{two_1}}">
+                <image class="star" src='/images/star-empty.png'></image>
+              </view>
+            </view>
+          </view>
         </view>
         <view class="card-footer">
           <view class="p">Distance{{game.edition}}</view>
@@ -23,9 +33,9 @@
     </view>
 
 
-  
 
-    
+
+
   </view>
 
 </view>

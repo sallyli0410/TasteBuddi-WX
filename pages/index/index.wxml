@@ -21,8 +21,4 @@
     </block>
   </view> -->
 
-    <view class="login-container" wx:if="{{ !hasUserInfo }}">
-  <view class="h1">Sign In To Play</view>
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
-    </view>
-    <block wx:else bindtap=""></block>
+   
