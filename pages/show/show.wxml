@@ -2,7 +2,7 @@
 <!-- Hero Image -->
 <view class='swipercontent'>
   <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
-    <block wx:for="{{imgUrls}}" wx:key="unique">
+    <block wx:for="{{images}}" wx:for-item="{{}}" wx:key="unique">
       <swiper-item>
         <image src="{{item}}" class="slide-image" width="355" height="150" mode="aspectFill" />
       </swiper-item>
@@ -10,7 +10,7 @@
   </swiper>
 
   <view class="dots">
-    <block wx:for="{{imgUrls}}" wx:key="unique">
+    <block wx:for="{{images}}" wx:key="unique">
       <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
     </block>
   </view>
@@ -72,9 +72,9 @@
       <input class="blue-outline-input" name="quantity" placeholder="e.g 150g" />
     </view>
     <view class="section">
-      <view class="submit-button">
-        <text class="h2" bindtap="submitRequest">Request</text>
-      </view>
+      <button form-type="submit" class="submit-button">
+        <text class="h2">Request</text>
+      </button>
     </view>
   </form>
 </view>
