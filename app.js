@@ -36,9 +36,9 @@ App({
     let that = this
     wx.getSetting({
       success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          that.getUserInfo();
-        } else {
+        // if (res.authSetting['scope.userInfo']) {
+        //   that.getUserInfo();
+        // } else {
 
           wx.login({
             success: res => {
@@ -63,7 +63,7 @@ App({
             }
           })
 
-        }
+        // }
 
       }
     })
