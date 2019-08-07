@@ -72,9 +72,9 @@
       <input class="blue-outline-input" name="quantity" placeholder="e.g 150g" />
     </view>
     <view class="section">
-      <view class="submit-button">
-        <text class="h2" bindtap="submitRequest">Request</text>
-      </view>
+      <button form-type="submit" class="submit-button">
+        <text class="h2">Request</text>
+      </button>
     </view>
   </form>
 </view>

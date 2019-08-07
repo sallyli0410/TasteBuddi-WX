@@ -5,13 +5,12 @@
   color:white;
   background-color: #4AA3AD;
   border-radius: 5px;
-  height: 5vh;
-  padding: 15rpx;
+  width:100%;
 }
 
-.submit-button .h2{
+/* .submit-button .h2{
   line-height:5vh;
-}
+} */
 
 .yellow-outline-button {
   height: 5vh;
