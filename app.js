@@ -1,6 +1,15 @@
-//app.js
+// app.js
+const AV = require('./utils/av-weapp-min.js')
+const config = require('./key')
+
+
 App({
+
   onLaunch: function () {
+AV.init({
+  appId: config.lean_cloud_app_id,
+  appKey: config.lean_cloud_app_key,
+});
 
     const host = 'http://localhost:3000/api/v1/';
     console.log('beginning login');
@@ -11,7 +20,7 @@ App({
     wx.setStorageSync('logs', logs)
     // <----------login function----------->
     this.tologin()
-    
+
     wx.login({
       success: (res) => {
         console.log(res)
@@ -46,7 +55,7 @@ App({
       },
     })
   },
-  
+
   globalData: {
     userInfo: null,
     url: 'http://localhost:3000/api/v1/'

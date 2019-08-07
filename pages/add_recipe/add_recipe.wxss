@@ -1,0 +1,20 @@
+.sub-section {
+  background-color: #1B1647;
+  color:white;
+  margin-top:5%;
+  box-shadow: 0 0 10px #B394FF;
+  border-radius: 5px;
+  height: 4vh;
+  padding: 1vh 1vh 1vh 1vh;
+}
+
+.picker {
+  width: 90vw;
+  height: 3vh;
+  color: white;
+  padding-top: 0.5vh;
+}
+
+.section {
+
+}
