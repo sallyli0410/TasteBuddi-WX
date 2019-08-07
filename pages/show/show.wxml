@@ -2,15 +2,15 @@
 <!-- Hero Image -->
 <view class='swipercontent'>
   <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
-    <block wx:for="{{imgUrls}}" wx:key="unique">
+    <block wx:for="{{imageUrls}}" wx:for-item="image" wx:key="unique">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" width="355" height="150" mode="aspectFill" />
+        <image src="{{image}}" class="slide-image" width="355" height="150" mode="aspectFill" />
       </swiper-item>
     </block>
   </swiper>
 
   <view class="dots">
-    <block wx:for="{{imgUrls}}" wx:key="unique">
+    <block wx:for="{{imageUrls}}" wx:key="unique">
       <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
     </block>
   </view>
@@ -18,15 +18,17 @@
 
 <view class="container">
   <!-- Tags -->
+  <view class="section">
+  </view>
   <!-- Seller -->
   <view class="seller-card" bindtap="goToSeller">
     <image class="avatar" alt="avatar" mode="aspectFill" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
     <view class="seller-card-infos">
       <view class="name ">
         <!-- need to fetch data from wx request from user -->
-        <text class="h2 ">Name{{user}}</text>
+        <text class="h2 ">{{seller_name}}</text>
       </view>
-      <text class="p ">{{user}}has x recipes</text>
+      <text class="p ">has x recipes</text>
     </view>
   </view>
   <!-- Ratings -->
@@ -36,12 +38,12 @@
   <!-- Description -->
   <view class="section">
     <text class="h2-blue">Description</text>
-    <text class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</text>
+    <text class="p">{{description}}</text>
   </view>
   <!-- Ingredients -->
   <view class="section">
     <text class="h2-blue">Ingredients</text>
-    <text class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</text>
+    <text class="p">{{ingredients}}</text>
   </view>
   <!-- Map view -->
   <view class="section">
@@ -49,20 +51,30 @@
   </view>
   <!-- Purchase form -->
   <form bindsubmit="bindFormSubmit">
-    <text class="h2-blue">Choose a pick up time\n</text>
-    <view class="date-picker">
-      <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
-        <text class="p date">XXXX{{date}}</text>
-      </picker>
+    <text class="h2-blue">Choose a pick up date:</text>
+    <view class="section">
+      <view class="date-picker">
+        <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
+          <text class="p date">{{currentDate}}</text>
+        </picker>
+      </view>
+    </view>
+    <view class="section">
+      <text class="h2-blue">Choose a pick up time:</text>
+      <view class="date-picker">
+        <picker mode="time" value="{{time}}" start="{{currentTime}}" end="24:00" bindchange="bindTimeChange">
+          <text class="p date">{{currentTime}}</text>
+        </picker>
+      </view>
     </view>
     <view class="section">
       <view class="h2-blue section-title">Quantity:</view>
       <input class="blue-outline-input" name="quantity" placeholder="e.g 150g" />
     </view>
     <view class="section">
-      <view class="submit-button">
-        <text class="h2" bindtap="submitRequest">Request</text>
-      </view>
+      <button form-type="submit" class="submit-button">
+        <text class="h2">Request</text>
+      </button>
     </view>
   </form>
 </view>

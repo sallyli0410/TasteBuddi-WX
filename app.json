@@ -10,6 +10,7 @@
     "pages/my_orders/my_orders",
     "pages/my_purchases/my_purchases",
     "pages/logs/logs",
+    "pages/chef-sign-up/chef-sign-up",
     "components/search-bar/search-bar"
   ],
   "window": {
@@ -28,7 +29,7 @@
         "pagePath": "pages/home/home",
         "text": "Home",
         "iconPath": "images/home.png",
-        "selectedIconPath":"images/home-filled.png"
+        "selectedIconPath": "images/home-filled.png"
       },
       {
         "pagePath": "pages/marketplace/marketplace",
@@ -42,5 +43,6 @@
       }
     ]
   },
+  
   "sitemapLocation": "sitemap.json"
 }

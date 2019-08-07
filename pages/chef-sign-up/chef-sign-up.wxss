@@ -1,0 +1,42 @@
+.sub-section {
+  display: flex;
+  padding-bottom: 30rpx;
+  flex-direction: row;
+}
+
+.h1 {
+  margin-left: 2.5%;
+}
+
+.boxes {
+  flex: 5%;
+  position: relative;
+}
+
+.checkbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.texts {
+  flex: 75%;
+  padding: 0 30rpx;
+  text-align: left;
+}
+
+page {
+  background-color: #EDC752;
+}
+
+.submit-button {
+  position: relative;
+}
+
+.submit-button .h2{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

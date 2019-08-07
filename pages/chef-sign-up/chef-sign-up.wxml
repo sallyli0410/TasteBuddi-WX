@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="section">
+    <text class="h1"> Terms and Conditions</text>
+  </view>
+</view>
+
+<view class="container">
+  <form bindsubmit="formSubmit">
+
+    <view class="section">
+        <checkbox-group name="item">
+
+        <view class = "sub-section" wx:for="{{items}}">
+          <view class=boxes">
+            <label><checkbox value="{{item.name}}"/></label>
+          </view>
+
+          <view class="texts">
+            <text class="p">{{item.value}}</text>
+          </view>
+        </view>
+
+        </checkbox-group>
+    </view>
+
+
+    <view>
+      <button formType="submit" class="submit-button">
+        <text class="h2">Submit</text>
+      </button>
+    </view>
+
+
+  </form>
+</view>
