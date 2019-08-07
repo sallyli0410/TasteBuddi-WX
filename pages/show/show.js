@@ -16,13 +16,11 @@ Page({
     swiperCurrent: 0,
   },
 
-
-
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function(options) {
-    console.log(options)
+    //console.log(options)
     let page = this
     let productId = options.productId
 
@@ -41,7 +39,7 @@ Page({
     wx.request({
       url: `http://localhost:3000/api/v1/products/${productId}`,
       success: function(res) {
-        console.log(res)
+        //console.log('res', res)
         const name = res.data.name
         const description = res.data.description
         const images = res.data.img_url
@@ -49,6 +47,11 @@ Page({
         const seller_name = res.data.seller.name
         const seller_avatar = res.data.seller.avatar
         const seller_id = res.data.user_id
+
+        // locations
+        const lat = res.data.location_lat;
+        const long = res.data.location_long;
+        
         page.setData({
           name: name,
           description: description,
@@ -56,12 +59,33 @@ Page({
           images: images,
           seller_name: seller_name,
           seller_avatar: seller_avatar,
-          seller_id: seller_id
+          seller_id: seller_id,
+          lat: lat,
+          long: long,
+          mk: [{
+            latitude: lat,
+            longitude: long,
+            width: 40,
+            height: 40
+          }]
         });
         wx.hideToast();
       }
-    })
-
+    });
+    // wx.authorize({
+    //   scope: 'scope.userLocation',
+    //   success(res) {
+    //     //console.log('res', res)
+    //     wx.openLocation({
+    //       latitude: page.data.location_lat,
+    //       longitude: page.data.location_long,
+    //       scale: 28
+    //     })
+    //   },
+    //   fail(err) {
+    //     console.log(err)
+    //   }
+    // })
   },
 
   /**
