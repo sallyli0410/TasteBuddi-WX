@@ -34,6 +34,14 @@
   <!-- Ratings -->
   <view class="section">
     <text class="h2-blue">Rating</text>
+    <view class="star-container">
+      <view wx:for="{{one_1}}">
+        <image class="star" src='/images/star-filled.png'></image>
+      </view>
+      <view wx:for="{{two_1}}">
+        <image class="star" src='/images/star-empty.png'></image>
+      </view>
+    </view>
   </view>
   <!-- Description -->
   <view class="section">

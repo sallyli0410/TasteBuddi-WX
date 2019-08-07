@@ -1,1 +1,10 @@
 /* pages/marketplace/marketplace.wxss */
+
+.star-container{
+  display:flex;
+}
+
+.star{
+height: 30rpx !important;
+width: 30rpx !important
+}

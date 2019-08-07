@@ -13,9 +13,18 @@
       <image src="{{product.img_url}}" mode="aspectFill" />
       <view data-id="{{product.id}}" class="card-product-infos" bindtap="goToShow">
         <view class="content">
-          <view class="h2">{{product.name}}</view>    
+          <view class="h2">{{product.name}}</view>
           <view class="p">Pricing: $40.00{{product.price}}</view>
-          <view class="p">Rating{{product.avg_rating}}</view>
+          <view class="p">Rating{{rating}}
+            <view class="star-container">
+              <view wx:for="{{one_1}}">
+                <image class="star" src='/images/star-filled.png'></image>
+              </view>
+              <view wx:for="{{two_1}}">
+                <image class="star" src='/images/star-empty.png'></image>
+              </view>
+            </view>
+          </view>
         </view>
         <view class="card-footer">
           <view class="p">Distance{{game.edition}}</view>
@@ -24,9 +33,9 @@
     </view>
 
 
-  
 
-    
+
+
   </view>
 
 </view>
