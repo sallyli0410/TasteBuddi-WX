@@ -8,10 +8,10 @@
 </view>
 
 <!-- product cards -->
-  <view class="yellow-card-short">
+  <view class="yellow-card-short" data-id="{{product.id}}">
     <view class="yellow-card-product">
       <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" mode="aspectFill" />
-      <view data-id="{{game.id}}" class="yellow-card-product-infos" bindtap="goToShow">
+      <view  class="yellow-card-product-infos" bindtap="goToShow">
         <view class="content">
           <view class="h2">Sauce</view>
           <view class="p">Price</view>

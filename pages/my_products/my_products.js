@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  }, 
+
+  addRecipe: function() {
+    wx.redirectTo({
+      // url: '/pages/'
+    });
   }
 })
