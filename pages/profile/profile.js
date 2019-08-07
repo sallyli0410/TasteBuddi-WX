@@ -1,5 +1,7 @@
 // pages/profile/profile.js
-let app = getApp()
+const app = getApp()
+
+console.log(app)
 Page({
 
   /**
@@ -13,7 +15,14 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let page = this
+    let name = app.globalData.userInfo.nickName
+    let avatar = app.globalData.userInfo.avatarUrl
 
+    page.setData({
+      name: name,
+      avatar: avatar
+    })
   },
 
   /**
