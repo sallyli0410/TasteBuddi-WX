@@ -118,6 +118,7 @@
 					"name": "Search-bar",
 					"pathName": "components/search-bar/search-bar",
 					"query": "",
+
 					"scene": null
 				},
 				{
@@ -131,6 +132,7 @@
 					"id": -1,
 					"name": "index",
 					"pathName": "pages/index/index",
+
 					"scene": null
 				},
 				{
@@ -138,6 +140,12 @@
 					"name": "Chef Sign Up",
 					"pathName": "pages/chef-sign-up/chef-sign-up",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Add-recipe",
+					"pathName": "pages/add_recipe/add_recipe",
 					"scene": null
 				}
 			]
