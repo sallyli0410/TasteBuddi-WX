@@ -13,3 +13,13 @@
   border-radius: 10rpx;
 }
 
+/* stars */
+.star-container{
+  display:flex;
+  margin-top:15rpx;
+}
+
+.star{
+height: 60rpx !important;
+width: 60rpx !important
+}

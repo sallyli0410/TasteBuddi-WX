@@ -14,8 +14,12 @@ Page({
     interval: 5000,
     duration: 1000,
     swiperCurrent: 0,
-    imageUrls: ['http://theindigokitchen.com/wp-content/uploads/2016/06/IMG_7227__1464965797_86.82.108.171-1024x819-1160x665.jpg', 'http://theindigokitchen.com/wp-content/uploads/2016/06/IMG_7227__1464965797_86.82.108.171-1024x819-1160x665.jpg']
+    imageUrls: ['http://theindigokitchen.com/wp-content/uploads/2016/06/IMG_7227__1464965797_86.82.108.171-1024x819-1160x665.jpg', 'http://theindigokitchen.com/wp-content/uploads/2016/06/IMG_7227__1464965797_86.82.108.171-1024x819-1160x665.jpg'],
+    num: 3,
+    one_1: '',
+    two_1: ''
   },
+ 
 
 
 
@@ -61,6 +65,11 @@ Page({
         });
         wx.hideToast();
       }
+    })
+
+    this.setData({
+      one_1: this.data.num,
+      two_1: 5 - this.data.num
     })
 
   },
