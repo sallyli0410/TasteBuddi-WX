@@ -14,6 +14,7 @@ Page({
     interval: 5000,
     duration: 1000,
     swiperCurrent: 0,
+    imageUrls: ['http://theindigokitchen.com/wp-content/uploads/2016/06/IMG_7227__1464965797_86.82.108.171-1024x819-1160x665.jpg', 'http://theindigokitchen.com/wp-content/uploads/2016/06/IMG_7227__1464965797_86.82.108.171-1024x819-1160x665.jpg']
   },
 
 

@@ -2,15 +2,15 @@
 <!-- Hero Image -->
 <view class='swipercontent'>
   <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
-    <block wx:for="{{images}}" wx:for-item="{{}}" wx:key="unique">
+    <block wx:for="{{imageUrls}}" wx:for-item="image" wx:key="unique">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" width="355" height="150" mode="aspectFill" />
+        <image src="{{image}}" class="slide-image" width="355" height="150" mode="aspectFill" />
       </swiper-item>
     </block>
   </swiper>
 
   <view class="dots">
-    <block wx:for="{{images}}" wx:key="unique">
+    <block wx:for="{{imageUrls}}" wx:key="unique">
       <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
     </block>
   </view>
