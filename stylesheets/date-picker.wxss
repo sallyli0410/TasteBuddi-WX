@@ -5,7 +5,6 @@
   border-radius: 5px;
   height: 5vh;
   padding: 15rpx;
-  margin-top: 15rpx;
 }
 
 .date {

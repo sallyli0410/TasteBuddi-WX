@@ -1,7 +1,9 @@
 // pages/show/show.js
 const app = getApp()
+const U = require('../../utils/util.js')
 
 Page({
+
 
   /**
    * Page initial data
@@ -9,73 +11,112 @@ Page({
   data: {
     currentDate: new Date().getTime(),
     imgUrls: ["https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-    "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"],
+      "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    ],
     autoplay: true,
     interval: 5000,
     duration: 1000,
     swiperCurrent: 0,
   },
 
-  
+
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
+    console.log(options)
+    let page = this
+    let productId = options.productId
+
+    let date = new Date();
+    let currentDate = U.dateString(date);
+    this.setData({
+      currentDate
+    })
+
+    let time = new Date();
+    let currentTime = U.timeString(time);
+    this.setData({
+      currentTime
+    })
+
+    wx.request({
+      url: `http://localhost:3000/api/v1/products/${productId}`,
+      success: function(res) {
+        console.log(res)
+        const name = res.data.name
+        const description = res.data.description
+        const images = res.data.img_url
+        const ingredients = res.data.ingredients
+        const seller_name = res.data.seller.name
+        const seller_avatar = res.data.seller.avatar
+        const seller_id = res.data.user_id
+        page.setData({
+          name: name,
+          description: description,
+          ingredients: ingredients,
+          seller_name: seller_name,
+          seller_avatar: seller_avatar,
+          seller_id: seller_id
+        });
+        wx.hideToast();
+      }
+    })
 
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
 
-  goToSeller: function(event){
+  goToSeller: function(event) {
     console.log(33, event)
     // let id = event.currentTarget.dataset.id
     // wx.navigateTo({
@@ -86,28 +127,37 @@ Page({
     })
   },
 
-  bindFormSubmit: function (e) {
+  bindFormSubmit: function(e) {
     // Local storage
     var review = e.detail.value.review
   },
 
-  bindDateChange: function (e) {
-    console.log('picker startdate value', e.detail.value)
+  bindDateChange: function(e) {
+    console.log('picker date value', e.detail.value)
     this.setData({
       date: e.detail.value
     })
   },
 
-  submitRequest: function (e) {
+  bindTimeChange: function(e) {
+    console.log('picker time value', e.detail.value)
+    this.setData({
+      time: e.detail.value
+    })
+  },
+
+  submitRequest: function(e) {
     let page = this;
     let date = this.data.date;
+    let time = this.data.time;
     let product_id = this.data.product_id;
-
     //!IMPORTANT! user_id is the buyer's user_id
     let user_id = app.globalData.userId;
+
     let booking = {
       booking: {
         date: date,
+        time: time,
         product_id: product_id,
         user_id: user_id,
         status: 0
@@ -120,25 +170,22 @@ Page({
       duration: 2000,
       mask: true
     })
-    // send post request to api
-    // wx.request({
-    //   url: `https://gamestation.herokuapp.com/api/v1/users/${user_id}/bookings`,
-    //   method: 'POST',
-    //   data: booking,
-    //   success() {
-      
-    //     console.log('succeed');
-    //     // wx.reLaunch({
-    //     //   url: '/pages/home/home'
-    //     // });
-    //     wx.redirectTo({
-    //       url: '../rentals/rentals'
-    //     });
-    //   }
-    // });
+
+    wx.request({
+      url: `http://localhost:3000/api/v1/users/${useId}/bookings`,
+      method: 'POST',
+      data: booking,
+      success() {
+
+        console.log('succeed');
+        wx.reLaunch({
+          url: '/pages/home/home'
+        });
+      }
+    });
   },
 
-  swiperChange: function (e) {
+  swiperChange: function(e) {
     this.setData({
       swiperCurrent: e.detail.current
     })

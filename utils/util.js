@@ -6,7 +6,15 @@ const formatTime = date => {
   const minute = date.getMinutes()
   const second = date.getSeconds()
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+}
+
+const dateString = date => {
+  return formatTime(date).slice(0, 10)
+}
+
+const timeString = date => {
+  return formatTime(date).slice(-8, -3)
 }
 
 const formatNumber = n => {
@@ -14,6 +22,13 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const getKeyByValue = (object, value) => {
+  return Object.keys(object).find(key => object[key] === value);
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  dateString: dateString,
+  timeString: timeString,
+  getKeyByValue: getKeyByValue
 }
