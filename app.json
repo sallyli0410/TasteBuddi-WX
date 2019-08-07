@@ -28,7 +28,7 @@
         "pagePath": "pages/home/home",
         "text": "Home",
         "iconPath": "images/home.png",
-        "selectedIconPath":"images/home-filled.png"
+        "selectedIconPath": "images/home-filled.png"
       },
       {
         "pagePath": "pages/marketplace/marketplace",
@@ -42,5 +42,6 @@
       }
     ]
   },
+  
   "sitemapLocation": "sitemap.json"
 }

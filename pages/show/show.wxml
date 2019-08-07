@@ -24,9 +24,9 @@
     <view class="seller-card-infos">
       <view class="name ">
         <!-- need to fetch data from wx request from user -->
-        <text class="h2 ">Name{{user}}</text>
+        <text class="h2 ">{{seller_name}}</text>
       </view>
-      <text class="p ">{{user}}has x recipes</text>
+      <text class="p ">has x recipes</text>
     </view>
   </view>
   <!-- Ratings -->
@@ -36,12 +36,12 @@
   <!-- Description -->
   <view class="section">
     <text class="h2-blue">Description</text>
-    <text class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</text>
+    <text class="p">{{description}}</text>
   </view>
   <!-- Ingredients -->
   <view class="section">
     <text class="h2-blue">Ingredients</text>
-    <text class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu</text>
+    <text class="p">{{ingredients}}</text>
   </view>
   <!-- Map view -->
   <view class="section">
@@ -52,7 +52,7 @@
     <text class="h2-blue">Choose a pick up time\n</text>
     <view class="date-picker">
       <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
-        <text class="p date">XXXX{{date}}</text>
+        <text class="p date">{{currentDate}}</text>
       </picker>
     </view>
     <view class="section">
