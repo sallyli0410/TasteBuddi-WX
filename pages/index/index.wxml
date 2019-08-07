@@ -1,6 +1,6 @@
 <!--index.wxml-->
-<view class="yellow-container">
- 
+<!-- <block class="yellow-container" wx:if="{{ !hasUserInfo }}"> -->
+ <view class="yellow-container" >
 <text class="h1">Welcome to Taste Buddi</text>
 <view class="content">
 <text class="h1">Bring home authentic local flavors</text>
@@ -8,6 +8,7 @@
 <button class="white-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Sign In</button>
 </view>
 </view>
+<!-- </block> -->
 
 
 
@@ -19,3 +20,9 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view> -->
+
+    <view class="login-container" wx:if="{{ !hasUserInfo }}">
+  <view class="h1">Sign In To Play</view>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+    </view>
+    <block wx:else bindtap=""></block>
