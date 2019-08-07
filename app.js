@@ -7,29 +7,29 @@ App({
     
   },
 
-  getUserInfo: function (res) {
-
-    let that = this
-    const host = this.globalData.url;
-    wx.request({
-      url: host + 'login',
-      method: 'POST',
-      data: {
-        code: res.code
-      },
-      success: (res) => {
-        that.globalData.user = res.data;
-        
-      },
+  getUserInfo() {
+    let page = this
+    wx.getUserInfo({
+      success: res => {
+        page.globalData.userInfo = res.userInfo
+        const host = page.globalData.url
+        // console.log(444, host)
+        wx.request({
+          url: host + 'users/' + page.globalData.userId,
+          method: 'PUT',
+          data: {
+            wx_name: page.globalData.userInfo.nickName,
+            wx_avatar: page.globalData.userInfo.avatarUrl
+          },
+          success: (res) => {
+            console.log("viola", res) 
+            wx.switchTab({
+            url: '../home/home'
+            })
+          }
+        })
+      }
     })
-    // create_table "users", force: : cascade do | t |
-    //   t.string "wx_id"
-    // t.string "wx_name"
-    // t.string "wx_avatar"
-    // t.string "phone_number"
-    // t.boolean "seller_complete"
-    // t.datetime "created_at", null: false
-    // t.datetime "updated_at", null: false
   },
 
   checkLogin: function() {
@@ -37,21 +37,29 @@ App({
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
-          wx.getUserInfo({
-            success: res => {
-              this.globalData.userInfo = res.userInfo
-              
-              wx.switchTab({
-                url: '../home/home'
-              })
-
-            }
-          })
+          that.getUserInfo();
         } else {
 
           wx.login({
             success: res => {
-              that.getUserInfo(res)
+              // that.getUserInfo(res)
+              console.log(111, res)
+              const host = that.globalData.url
+              console.log(444, host)
+              wx.request({
+                url: host + 'login',
+                method: 'POST',
+                data: {
+                  code: res.code
+                },
+                success: (res) => {
+                  that.globalData.user = res.data;
+                  console.log('SUCCESS???', res)
+                  that.globalData.userId = res.data.userId
+                  that.getUserInfo();
+
+                },
+              })
             }
           })
 
