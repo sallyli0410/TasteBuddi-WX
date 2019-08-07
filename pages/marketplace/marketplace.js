@@ -1,3 +1,4 @@
+let app = getApp()
 // pages/marketplace/marketplace.js
 Page({
 
@@ -11,14 +12,16 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
-
+  onLoad: function(options) {
     let page = this
+
     wx.request({
       url: 'http://localhost:3000/api/v1/products',
-      success: function (res) {
+      success: function(res) {
         console.log(res)
-        page.setData({ products: res.data.products })
+        page.setData({
+          products: res.data.products
+        })
       }
     })
 
@@ -27,59 +30,57 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
-  goToShow: function (event) {
+  goToShow: function(event) {
     console.log(22, event)
-    // let id = event.currentTarget.dataset.id
-    // wx.navigateTo({
-    //   url: `/pages/show/show?productId=${id}`
-    // })
+    let id = event.currentTarget.dataset.id
+    console.log(id)
     wx.navigateTo({
-      url: '/pages/show/show',
+      url: `/pages/show/show?productId=${id}`
     })
   },
 })

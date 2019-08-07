@@ -132,6 +132,13 @@
 					"name": "index",
 					"pathName": "pages/index/index",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Chef Sign Up",
+					"pathName": "pages/chef-sign-up/chef-sign-up",
+					"query": "",
+					"scene": null
 				}
 			]
 		}
