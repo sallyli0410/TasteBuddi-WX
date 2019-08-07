@@ -1,9 +1,46 @@
-//app.js
-App({
-  onLaunch: function () {
-    console.log('launching')
+// app.js
+const AV = require('./utils/av-weapp-min.js')
+const config = require('./key')
 
-    // this.checkLogin(); 
+
+App({
+
+  onLaunch: function () {
+AV.init({
+  appId: config.lean_cloud_app_id,
+  appKey: config.lean_cloud_app_key,
+});
+
+    const host = 'http://localhost:3000/api/v1/';
+    console.log('beginning login');
+
+    // 展示本地存储能力
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+    // <----------login function----------->
+    this.tologin()
+
+    wx.login({
+      success: (res) => {
+        console.log(res)
+        // insert next code here
+        wx.request({
+          url: host + 'login',
+          method: 'post',
+          data: {
+            code: res.code
+          },
+          // insert next code here
+          success: (res) => {
+            console.log(res)
+            this.globalData.userId = res.data.userId
+          }
+        })
+      }
+    })
+
+  this.checkLogin(); 
     
   },
 
@@ -36,10 +73,6 @@ App({
     let that = this
     wx.getSetting({
       success: res => {
-        // if (res.authSetting['scope.userInfo']) {
-        //   that.getUserInfo();
-        // } else {
-
           wx.login({
             success: res => {
               // that.getUserInfo(res)
@@ -68,7 +101,7 @@ App({
       }
     })
   },
-  
+
   globalData: {
     userInfo: null,
     url: 'http://localhost:3000/api/v1/'

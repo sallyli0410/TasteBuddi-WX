@@ -7,6 +7,14 @@
   padding: 15rpx;
 }
 
+.date-picker-yellow {
+  background-color: #fbf1d4;
+  color: #4aa3ad;
+  border-radius: 5px;
+  height: 5vh;
+  padding: 15rpx;
+}
+
 .date {
   line-height: 5vh;
 }
