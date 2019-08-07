@@ -173,11 +173,10 @@ Page({
     })
 
     wx.request({
-      url: `http://localhost:3000/api/v1/users/${useId}/bookings`,
+      url: `http://localhost:3000/api/v1/users/${user_id}/bookings`,
       method: 'POST',
       data: request,
       success() {
-
         console.log('succeed');
         wx.redirectTo({
           url: '/pages/home/home'
