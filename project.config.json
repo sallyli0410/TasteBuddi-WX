@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 14,
 			"list": [
 				{
 					"id": 0,
@@ -131,6 +131,7 @@
 					"id": -1,
 					"name": "index",
 					"pathName": "pages/index/index",
+					"query": "",
 					"scene": null
 				},
 				{
@@ -144,6 +145,13 @@
 					"id": -1,
 					"name": "Add-recipe",
 					"pathName": "pages/add_recipe/add_recipe",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "show",
+					"pathName": "pages/show/show",
 					"scene": null
 				}
 			]

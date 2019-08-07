@@ -1,7 +1,4 @@
 /* stylesheets/buttons.wxss.wxss */
-
-
-
 .submit-button {
   text-align: center;
   color:white;
@@ -11,14 +8,12 @@
 }
 
 .yellow-outline-button {
-  height: 5vh;
   width:100%;
   text-align: center;
   color: #EDC752;
   border:4rpx solid #EDC752;
   background-color: white;
   border-radius: 5px;
-  padding: 15rpx;
 }
 
 .yellow-outline-button .h2 {

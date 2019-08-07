@@ -1,4 +1,5 @@
 // pages/profile/profile.js
+let app = getApp()
 Page({
 
   /**
