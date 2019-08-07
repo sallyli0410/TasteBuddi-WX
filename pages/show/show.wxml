@@ -18,6 +18,8 @@
 
 <view class="container">
   <!-- Tags -->
+  <view class="section">
+  </view>
   <!-- Seller -->
   <view class="seller-card" bindtap="goToSeller">
     <image class="avatar" alt="avatar" mode="aspectFill" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
@@ -49,11 +51,21 @@
   </view>
   <!-- Purchase form -->
   <form bindsubmit="bindFormSubmit">
-    <text class="h2-blue">Choose a pick up time\n</text>
-    <view class="date-picker">
-      <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
-        <text class="p date">{{currentDate}}</text>
-      </picker>
+    <text class="h2-blue">Choose a pick up date:</text>
+    <view class="section">
+      <view class="date-picker">
+        <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
+          <text class="p date">{{currentDate}}</text>
+        </picker>
+      </view>
+    </view>
+    <view class="section">
+      <text class="h2-blue">Choose a pick up time:</text>
+      <view class="date-picker">
+        <picker mode="time" value="{{time}}" start="{{currentTime}}" end="24:00" bindchange="bindTimeChange">
+          <text class="p date">{{currentTime}}</text>
+        </picker>
+      </view>
     </view>
     <view class="section">
       <view class="h2-blue section-title">Quantity:</view>

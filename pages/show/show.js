@@ -1,8 +1,9 @@
-var util = require('../../utils/util.js')
 // pages/show/show.js
 const app = getApp()
+const U = require('../../utils/util.js')
 
 Page({
+
 
   /**
    * Page initial data
@@ -29,12 +30,25 @@ Page({
     let page = this
     let productId = options.productId
 
+    let date = new Date();
+    let currentDate = U.dateString(date);
+    this.setData({
+      currentDate
+    })
+
+    let time = new Date();
+    let currentTime = U.timeString(time);
+    this.setData({
+      currentTime
+    })
+
     wx.request({
       url: `http://localhost:3000/api/v1/products/${productId}`,
-      success: function(res){
+      success: function(res) {
         console.log(res)
         const name = res.data.name
         const description = res.data.description
+        const images = res.data.img_url
         const ingredients = res.data.ingredients
         const seller_name = res.data.seller.name
         const seller_avatar = res.data.seller.avatar
@@ -119,22 +133,31 @@ Page({
   },
 
   bindDateChange: function(e) {
-    console.log('picker startdate value', e.detail.value)
+    console.log('picker date value', e.detail.value)
     this.setData({
       date: e.detail.value
+    })
+  },
+
+  bindTimeChange: function(e) {
+    console.log('picker time value', e.detail.value)
+    this.setData({
+      time: e.detail.value
     })
   },
 
   submitRequest: function(e) {
     let page = this;
     let date = this.data.date;
+    let time = this.data.time;
     let product_id = this.data.product_id;
-
     //!IMPORTANT! user_id is the buyer's user_id
     let user_id = app.globalData.userId;
+
     let booking = {
       booking: {
         date: date,
+        time: time,
         product_id: product_id,
         user_id: user_id,
         status: 0
@@ -149,7 +172,7 @@ Page({
     })
 
     wx.request({
-      url: `https://gamestation.herokuapp.com/api/v1/users/${user_id}/bookings`,
+      url: `http://localhost:3000/api/v1/users/${useId}/bookings`,
       method: 'POST',
       data: booking,
       success() {
