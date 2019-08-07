@@ -3,7 +3,7 @@ App({
   onLaunch: function () {
     console.log('launching')
 
-    this.checkLogin(); 
+    // this.checkLogin(); 
     
   },
 
