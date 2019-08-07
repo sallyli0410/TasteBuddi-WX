@@ -56,8 +56,9 @@
   <!-- Map view -->
   <view class="section">
     <text class="h2-blue">Location</text>
+    <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
   </view>
-  <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
+  
 
   <!-- Purchase form -->
   <form bindsubmit="bindFormSubmit">
@@ -82,9 +83,11 @@
       <input class="blue-outline-input" name="quantity" placeholder="e.g 150g" />
     </view>
     <view class="section">
-      <button form-type="submit" class="submit-button">
+      <button form-type="submit" class="submit-button" >
         <text class="h2">Request</text>
       </button>
     </view>
   </form>
 </view>
+
+<!-- bindtap="submitRequest" -->

@@ -11,7 +11,8 @@ Component({
    * Component initial data
    */
   data: {
-
+    star_default: 0,
+    star_full: 5
   },
 
   /**

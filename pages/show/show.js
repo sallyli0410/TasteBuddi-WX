@@ -84,7 +84,6 @@ Page({
       two_1: 5 - this.data.num
     })
 
-
   },
 
   /**
@@ -149,33 +148,15 @@ Page({
 
   bindFormSubmit: function(e) {
     // Local storage
-    var review = e.detail.value.review
-  },
-
-  bindDateChange: function(e) {
-    console.log('picker date value', e.detail.value)
-    this.setData({
-      date: e.detail.value
-    })
-  },
-
-  bindTimeChange: function(e) {
-    console.log('picker time value', e.detail.value)
-    this.setData({
-      time: e.detail.value
-    })
-  },
-
-  submitRequest: function(e) {
     let page = this;
     let date = this.data.date;
     let time = this.data.time;
     let product_id = this.data.product_id;
     //!IMPORTANT! user_id is the buyer's user_id
-    let user_id = app.globalData.userId;
+    let user_id = app.globalData.userId
 
-    let booking = {
-      booking: {
+    let request = {
+      request: {
         date: date,
         time: time,
         product_id: product_id,
@@ -194,15 +175,29 @@ Page({
     wx.request({
       url: `http://localhost:3000/api/v1/users/${useId}/bookings`,
       method: 'POST',
-      data: booking,
+      data: request,
       success() {
 
         console.log('succeed');
-        wx.reLaunch({
+        wx.redirectTo({
           url: '/pages/home/home'
         });
       }
     });
+  },
+
+  bindDateChange: function(e) {
+    console.log('picker date value', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+
+  bindTimeChange: function(e) {
+    console.log('picker time value', e.detail.value)
+    this.setData({
+      time: e.detail.value
+    })
   },
 
   swiperChange: function(e) {
