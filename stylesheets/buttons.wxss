@@ -1,16 +1,16 @@
 /* stylesheets/buttons.wxss.wxss */
 
+.button-section{
+  margin: 30rpx 0rpx;
+  padding: 15rpx;
+  height: 5vh;
+}
+
 .submit-button{
   text-align: center;
   color:white;
   background-color: #4AA3AD;
   border-radius: 5px;
-  width:100%;
-}
-
-/* .submit-button .h2{
-  line-height:5vh;
-} */
 
 .yellow-outline-button {
   height: 5vh;
