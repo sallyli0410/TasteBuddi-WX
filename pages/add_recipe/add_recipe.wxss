@@ -18,3 +18,19 @@ image {
   font-size: 32rpx;
   margin-top: 15rpx;
 }
+
+.date-picker-yellow{
+  color: black;
+  position: relative;
+}
+
+.date-picker-yellow .p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.data {
+  width: 0px;
+  height: 0px;
+}

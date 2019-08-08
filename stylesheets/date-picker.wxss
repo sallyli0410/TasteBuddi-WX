@@ -9,7 +9,7 @@
 
 .date-picker-yellow {
   background-color: #fbf1d4;
-  color: #4aa3ad;
+  scolor: #4aa3ad;
   border-radius: 5px;
   height: 5vh;
   padding: 15rpx;

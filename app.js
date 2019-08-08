@@ -19,7 +19,7 @@ AV.init({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     // <----------login function----------->
-
+    
     wx.login({
       success: (res) => {
         console.log(res)
@@ -39,8 +39,8 @@ AV.init({
       }
     })
 
-  this.checkLogin(); 
-    
+  this.checkLogin();
+
   },
 
   getUserInfo() {
@@ -58,7 +58,7 @@ AV.init({
             wx_avatar: page.globalData.userInfo.avatarUrl
           },
           success: (res) => {
-            console.log("viola", res) 
+            console.log("viola", res)
             wx.switchTab({
             url: '../home/home'
             })
@@ -99,7 +99,7 @@ AV.init({
 
       }
     })
-    
+
   },
 
   globalData: {
