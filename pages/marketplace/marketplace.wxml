@@ -2,7 +2,9 @@
 <view class="container">
 
   <!-- Search-Bar -->
-
+  <view class="search-container">
+    <search-box inputbind="" shape="round" />
+  </view>
 
   <!-- filter -->
 
@@ -15,9 +17,9 @@
         <view class="content">
           <view class="h2">{{product.name}}</view>
           <view class="p">Pricing: $40.00{{product.price}}</view>
-          <view class="p">Rating{{rating}}
+          <view class="p">Rating:{{rating}}
             <view class="star-container">
-              <view wx:for="{{one_1}}">
+              <view wx:for="{{product.avg_rating}}">
                 <image class="star" src='/images/star-filled.png'></image>
               </view>
               <view wx:for="{{two_1}}">
@@ -27,7 +29,7 @@
           </view>
         </view>
         <view class="card-footer">
-          <view class="p">Distance{{game.edition}}</view>
+          <!-- <view class="p">Distance{{product.}}</view> -->
         </view>
       </view>
     </view>

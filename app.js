@@ -11,7 +11,7 @@ AV.init({
   appKey: config.lean_cloud_app_key,
 });
 
-    const host = 'http://localhost:3000/api/v1/';
+    const host = 'http://tastebuddi.wogengapp.cn/api/v1/';
     console.log('beginning login');
 
     // 展示本地存储能力
@@ -104,6 +104,8 @@ AV.init({
 
   globalData: {
     userInfo: null,
-    url: 'http://localhost:3000/api/v1/'
+    url: 'https://tastebuddi.wogengapp.cn/api/v1/'
+        // url: 'http://localhost:3000/api/v1/'
+
   }
 })
