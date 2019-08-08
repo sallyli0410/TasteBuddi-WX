@@ -1,8 +1,8 @@
 // pages/profile/profile.js
 const app = getApp()
 
-console.log(app)
 Page({
+  
 
   /**
    * Page initial data
@@ -18,7 +18,7 @@ Page({
     let page = this
     let name = app.globalData.userInfo.nickName
     let avatar = app.globalData.userInfo.avatarUrl
-
+    console.log('userId', app.globalData.userId)
     page.setData({
       name: name,
       avatar: avatar
@@ -77,8 +77,9 @@ Page({
   goToMyProducts: function(event){
     console.log(33, event)
     // let id = event.currentTarget.dataset.id
+    // console.log(id)
     // wx.navigateTo({
-    //   url: `/pages/show/show?productId=${id}`
+    //   url: `/products/${id}/`,
     // })
     wx.navigateTo({
       url: '../my_products/my_products',
@@ -100,12 +101,9 @@ Page({
 
    goToMyPurchases: function(event){
     console.log(33, event)
-    // let id = event.currentTarget.dataset.id
-    // wx.navigateTo({
-    //   url: `/pages/show/show?productId=${id}`
-    // })
+    let id = event.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../my_purchases/my_purchases',
+      url: `${app.globalData.url}users/${id}`
     })
   },
 })

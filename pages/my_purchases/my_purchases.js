@@ -1,17 +1,29 @@
 // pages/my_purchases/my_purchases.js
+let app = getApp()
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    stars: [0,1,2,3,4],
+    defaultStars: '/images/star-empty.png',
+    fullStars: '/images/star-empty.png',
+    halfStars: '/images/star-empty.png',
+    rating: 0
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let page = this
+    wx.request({
+      url: `${app.globalData.url}users`,
+      success: function(res){
+        console.log(res)
+      }
+    })
 
   },
 

@@ -1,0 +1,20 @@
+.picker {
+  width: 90vw;
+  height: 3vh;
+  color: white;
+  padding-top: 0.5vh;
+}
+
+image {
+  width:100%;
+}
+
+.upload-button {
+  height: 150rpx;
+}
+
+.q-image-remover {
+  color: #FF4848;
+  font-size: 32rpx;
+  margin-top: 15rpx;
+}

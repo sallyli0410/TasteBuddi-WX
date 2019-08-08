@@ -2,30 +2,37 @@
 <view class="container">
   <view class="h2">Here are all your purchases</view>
 
+  <!-- filter tab -->
+
   <!-- Yellow product card -->
-  
-  <view class="yellow-card">
-    <view class="profile">
-      <image class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
-      <view class="p">Waiting for Jennifer to respond</view>
-    </view>
-    <view class="yellow-card-product">
-      <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" mode="aspectFill" />
-      <view data-id="{{game.id}}" class="yellow-card-product-infos" bindtap="goToShow">
-        <view class="content">
-          <view class="h2">Sauce</view>
-          <view class="p">Price</view>
-          <view class="p">Units</view>
+
+  <view class="section">
+    <view class="yellow-card">
+      <view class="profile">
+        <image class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+        <view class="p">Waiting for Jennifer to respond</view>
+      </view>
+      <view class="yellow-card-product">
+        <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" mode="aspectFill" />
+        <view data-id="{{game.id}}" class="yellow-card-product-infos" bindtap="goToShow">
+          <view class="content">
+            <view class="h2">Sauce</view>
+            <view class="p">Price</view>
+            <view class="p">Units</view>
+          </view>
+          <view class="card-footer-p">
+            <view>Date</view>
+          </view>
         </view>
-        <view class="card-footer-p">
-          <view>Date</view>
+        <view>
         </view>
       </view>
-      <view>
+      <view class="rating">
+      
       </view>
-    </view>
-    <view class="response">
-      <text class="full-tab p" bindtap="cancel">Cancel</text>
+      <view class="response">
+        <text class="full-tab p" bindtap="cancel">Cancel</text>
+      </view>
     </view>
   </view>
 </view>

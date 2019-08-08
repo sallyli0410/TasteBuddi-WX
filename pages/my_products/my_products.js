@@ -1,4 +1,5 @@
 // pages/my_products/my_products.js
+let app = getApp()
 Page({
 
   /**
@@ -66,7 +67,7 @@ Page({
 
   addRecipe: function() {
     wx.redirectTo({
-      // url: '/pages/'
+      url: '/pages/add_recipe/add_recipe'
     });
   }
 })

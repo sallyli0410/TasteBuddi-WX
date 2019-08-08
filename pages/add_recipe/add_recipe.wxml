@@ -1,0 +1,69 @@
+<!--pages/add_recipe/add_recipe.wxml-->
+<view class="container">
+  <text class="h2">Create a new recipe</text>
+
+  <form bindsubmit='formSubmit' class="form">
+
+    <view class="section">
+      <label class="h2-yellow" for="name">Name:</label>
+      <input class="yellow-input" name='name' placeholder='Nga-pi-yay'></input>
+    </view>
+
+    <view class="section">
+      <label class="h2-yellow" for="name">Description:</label>
+      <input class="yellow-input" name='description' placeholder='Traditional Burmese fish sauce'></input>
+    </view>
+
+    <view class="section">
+      <label class="h2-yellow" for="name">Ingredients</label>
+      <view class="ingredients-box">
+        <input class="yellow-input" name='ingredients'></input>
+      </view>
+    </view>
+
+
+    <view class="section">
+      <label class="h2-yellow">Start Date:\n</label>
+      <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindStartDateChange">
+        <view class=".date-picker-yellow ">
+          <text class="p">{{start_date}}</text>
+        </view>
+      </picker>
+    </view>
+
+    <view class="section">
+      <label class="h2-yellow">End Date:\n</label>
+      <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindEndDateChange">
+        <view class=".date-picker-yellow">
+          <text class="p">{{end_date}}</text>
+        </view>
+      </picker>
+    </view>
+
+    <view class="section">
+      <label class="h2-yellow" for="name">Pick-up location:</label>
+      <input class="yellow-input" name='name' placeholder='199, Taikang East Road'></input>
+    </view>
+
+    <view class="section">
+      <label class="h2-yellow" for="image">Images:</label>
+      <image class="upload-button" src="/images/img_upload.png" mode="aspectFit" bindtap="chooseImage"></image>
+      <!-- <button type='default' bindtap="chooseImage" wx:if="{{images.length < 5}}">Select up to 5 images</button> -->
+    </view>
+
+    <view class="section">
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview" />
+          <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">Remove Image</view>
+        </view>
+      </block>
+    </view>
+
+    <view class="section">
+        <button formType='submit' bindtap="takePhoto" class='submit-button'>
+          <text class="h2">Submit</text>
+        </button>
+    </view>
+  </form>
+</view>
