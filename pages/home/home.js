@@ -1,4 +1,6 @@
 // pages/home/home.js
+let app = getApp()
+
 Page({
 
   /**
@@ -18,10 +20,17 @@ Page({
     swiperCurrent: 0,
   },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad: function (options) {
+    let page = this
+    wx.request({
+      url: 'http://localhost:3000/api/v1/products',
+      success: function (res) {
+        console.log('giggles', res),
+        page.setData({
+          products: res.data.products
+        })
+      }
+    })
   },
 
   /**
@@ -75,6 +84,14 @@ Page({
     this.setData({
       swiperCurrent: e.detail.current
     })
-  }
+  },
 
+  goToShow: function (event) {
+    console.log(22, event)
+    let id = event.currentTarget.dataset.id
+    console.log(id)
+    wx.navigateTo({
+      url: `/pages/show/show?productId=${id}`
+    })
+  },
 })
