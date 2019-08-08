@@ -1,5 +1,6 @@
 <!--pages/show/show.wxml-->
 <!-- Hero Image -->
+<!-- <image src="" mode="aspectFill"/ > -->
 <view class='swipercontent'>
   <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
     <block wx:for="{{imageUrls}}" wx:for-item="image" wx:key="unique">
@@ -8,6 +9,7 @@
       </swiper-item>
     </block>
   </swiper>
+
 
   <view class="dots">
     <block wx:for="{{imageUrls}}" wx:key="unique">
@@ -35,7 +37,7 @@
   <view class="section">
     <text class="h2-blue">Rating</text>
     <view class="star-container">
-      <view wx:for="{{one_1}}">
+      <view wx:for="{{avg_rating}}">
         <image class="star" src='/images/star-filled.png'></image>
       </view>
       <view wx:for="{{two_1}}">
@@ -51,15 +53,17 @@
   <!-- Ingredients -->
   <view class="section">
     <text class="h2-blue">Ingredients</text>
-    <text class="p">{{ingredients}}</text>
+    <block wx:for="{{ingredients}}" wx:for-item="ingredient" data-item="{{ingredient}}">
+      <text class="p">{{ingredient.name}}</text>
+    </block>
   </view>
   <!-- Map view -->
   <view class="section">
     <text class="h2-blue">Location</text>
     <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
+    <text class="p">{{distance}}km away</text>
+
   </view>
-  <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
-  <text>{{distance}}km away</text>
 
 
   <!-- Purchase form -->
@@ -85,7 +89,7 @@
       <input class="blue-outline-input" name="quantity" placeholder="e.g 150g" />
     </view>
     <view class="section">
-      <button form-type="submit" class="submit-button" >
+      <button form-type="submit" class="submit-button">
         <text class="h2">Request</text>
       </button>
     </view>

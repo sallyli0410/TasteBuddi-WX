@@ -1,7 +1,5 @@
 <!--pages/home/home.wxml-->
 
-
-
 <!-- Hero Image -->
 <view class='swipercontent'>
   <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">

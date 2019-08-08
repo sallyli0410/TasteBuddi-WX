@@ -1,12 +1,6 @@
-<view class="test">
-
-<form bindsubmit="formSubmit" bindreset="formReset">
 <view class="search-box">
   <image src="/images/search.png" class="search-image"/>
   <view class="text-area">
-    <input name="input" placeholder="Search" class="p"/>
+    <input name="input" placeholder="Search" class="p" bindinput="inputBind" value="{{inputValue}}"/>
   </view>
-</view>
-</form>
-
 </view>

@@ -6,7 +6,7 @@ Page({
    * Page initial data
    */
   data: {
-    num: 3.5,
+    // num: 3.5,
     one_1: '',
     two_1: ''
   },
@@ -18,18 +18,18 @@ Page({
     let page = this
 
     wx.request({
-      url: 'http://localhost:3000/api/v1/products',
+      url: `${app.globalData.url}products`,
       success: function(res) {
-        console.log(res)
+        console.log(222,res)
         page.setData({
-          products: res.data.products
+          products: res.data.products,
         })
       }
     })
 
     this.setData({
-      one_1: this.data.num,
-      two_1: 5 - this.data.num
+      // one_1: this.data.num,
+      two_1: 4 - avg_rating
     })
 
   

@@ -25,3 +25,7 @@
   margin: 30rpx 0rpx;
 }
 
+.search-container{
+  margin-bottom: 50rpx;
+}
+
