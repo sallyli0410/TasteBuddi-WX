@@ -100,6 +100,7 @@ AV.init({
 
       }
     })
+    
   },
 
   globalData: {

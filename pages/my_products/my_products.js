@@ -66,7 +66,7 @@ Page({
 
   addRecipe: function() {
     wx.redirectTo({
-      // url: '/pages/'
+      url: '/pages/'
     });
   }
 })
