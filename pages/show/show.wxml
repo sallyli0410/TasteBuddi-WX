@@ -58,7 +58,9 @@
     <text class="h2-blue">Location</text>
     <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
   </view>
-  
+  <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
+  <text>{{distance}}km away</text>
+
 
   <!-- Purchase form -->
   <form bindsubmit="bindFormSubmit">
