@@ -1,4 +1,5 @@
 // pages/my_purchases/my_purchases.js
+let app = getApp()
 Page({
 
   /**
@@ -12,6 +13,13 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let page = this
+    wx.request({
+      url: `${app.globalData.url}users`,
+      success: function(res){
+        console.log(res)
+      }
+    })
 
   },
 

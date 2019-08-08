@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <!-- <block class="yellow-container" wx:if="{{ !hasUserInfo }}"> -->
- <view class="yellow-container" >
+<view class="yellow-container" >
 <text class="h1">Welcome to Taste Buddi</text>
 <view class="content">
 <text class="h1">Bring home authentic local flavors</text>
@@ -9,6 +9,7 @@
 </view>
 </view>
 <!-- </block> -->
+
 
 
 

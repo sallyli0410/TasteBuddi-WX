@@ -3,6 +3,7 @@ const app = getApp()
 
 console.log(app)
 Page({
+  
 
   /**
    * Page initial data
@@ -77,8 +78,9 @@ Page({
   goToMyProducts: function(event){
     console.log(33, event)
     // let id = event.currentTarget.dataset.id
+    // console.log(id)
     // wx.navigateTo({
-    //   url: `/pages/show/show?productId=${id}`
+    //   url: `/products/${id}/`,
     // })
     wx.navigateTo({
       url: '../my_products/my_products',

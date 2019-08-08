@@ -34,6 +34,7 @@ Page({
     this.setData({
       currentDate
     })
+    
 
     let time = new Date();
     let currentTime = U.timeString(time);
