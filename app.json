@@ -45,7 +45,7 @@
     ]
   },
 
-  
+
   "permission": {
     "scope.userLocation": {
       "desc": "Please agree to share your location"

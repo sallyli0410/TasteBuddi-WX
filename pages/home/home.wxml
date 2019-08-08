@@ -1,5 +1,10 @@
 <!--pages/home/home.wxml-->
 
+<!-- Search bar -->
+<view class="search-section">
+<search-box class="search" value="{{ value }}" placeholder="请输入搜索关键词" background="transparent" shape="round" />
+</view>
+
 <!-- Hero Image -->
 <view class='swipercontent'>
   <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
@@ -21,8 +26,9 @@
   <!-- Recommendations -->
   <view class="section">
     <text class="h2-yellow">Your Recommendations</text>
-    <image class="image-cards" alt="image-cards" src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" mode="aspectFill" />
-    <!-- wx:for="{{ChefUrls}}" wx:for-item="chef" data-item="{{chef}}" -->
+    <block style="display:flex;" wx:for="{{products}}" wx:for-item="product" data-item="{{product}}">
+    <image bindtap="goToShow" class="image-cards" alt="image-cards" src="{{product.img_url}}" mode="aspectFill" />
+    </block>
   </view>
 
   <!-- Top Chefs -->

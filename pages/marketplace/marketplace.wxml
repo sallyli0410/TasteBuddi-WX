@@ -7,6 +7,13 @@
   </view>
 
   <!-- filter -->
+  <!-- test button for filter -->
+  <view wx:for="{{tagsArray}}" wx:for-item="tag" >
+    <button data-tag="{{tag}}" bindtap="filterTags">{{tag}}</button>
+  </view>
+
+<!-- <button data-tag="spicy" bindtap="filterTags">spicy</button> -->
+
 
   <!-- product-cards -->
   <view class="cards-container">
@@ -17,6 +24,7 @@
         <view class="content">
           <view class="h2">{{product.name}}</view>
           <view class="p">Pricing: $40.00{{product.price}}</view>
+          <view class="p">Tag:{{product.tags}}</view>
           <view class="p">Rating:{{rating}}
             <view class="star-container">
               <view wx:for="{{product.avg_rating}}">

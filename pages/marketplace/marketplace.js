@@ -8,7 +8,8 @@ Page({
   data: {
     // num: 3.5,
     one_1: '',
-    two_1: ''
+    two_1: '',
+    tagsArray: []
   },
 
   /**
@@ -24,15 +25,29 @@ Page({
         page.setData({
           products: res.data.products,
         })
+
+        let tagsArray = page.data.tagsArray
+        page.data.products.forEach(p => {
+          p.tags.forEach(t => {
+            tagsArray.push(t);
+          }
+          )
+        })
+
+        page.setData({
+          tagsArray
+        })
       }
     })
+
+
 
     this.setData({
       // one_1: this.data.num,
       two_1: 4 - avg_rating
     })
 
-  
+
 
   },
 
@@ -92,4 +107,30 @@ Page({
       url: `/pages/show/show?productId=${id}`
     })
   },
+
+
+  filterTags: function (e) {
+    let tagValue = e.currentTarget.dataset.tag
+    let products = this.data.products
+    let filteredProducts = []
+
+    if(tagValue === 'all') {
+      this.setData({
+        products
+      })
+    } else {
+
+      products.forEach(p => {
+        if (p.tags.includes(tagValue)) {
+          filteredProducts.push(p)
+        }
+      })
+
+      this.setData({
+        products: filteredProducts
+      })
+    }
+
+  }
 })
+
