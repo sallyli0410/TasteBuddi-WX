@@ -79,6 +79,28 @@ Page({
     })
   },
 
+  chooseLocation: function (e) {
+    let page = this;
+    wx.authorize({
+      scope: 'scope.userLocation',
+      success(res) {
+        console.log('res', res)
+        wx.chooseLocation({
+          success: function (res) {
+            console.log('res2', res)
+            const name = res.name;
+            const lat = res.latitude;
+            const long = res.longitude;
+            page.setData({name, lat, long});
+          }
+        })
+      },
+      fail(err) {
+        console.log(err)
+      }
+    });
+  },
+
   onLoad(options) {
     $init(this)
     console.log(this.data.currentDate)

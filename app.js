@@ -19,8 +19,7 @@ AV.init({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     // <----------login function----------->
-
-
+    
     wx.login({
       success: (res) => {
         console.log(res)

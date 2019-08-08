@@ -27,6 +27,9 @@
         <view>
         </view>
       </view>
+      <view class="rating">
+      
+      </view>
       <view class="response">
         <text class="full-tab p" bindtap="cancel">Cancel</text>
       </view>

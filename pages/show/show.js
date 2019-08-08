@@ -2,9 +2,11 @@
 const app = getApp()
 const U = require('../../utils/util.js')
 
+// mapapi
+var QQMapWX = require('../../qqmap-wx-jssdk.js');
+var qqmapsdk;
+
 Page({
-
-
   /**
    * Page initial data
    */
@@ -25,20 +27,24 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function(options) {
+    qqmapsdk = new QQMapWX({
+      key: 'NX5BZ-O4UC6-VWKSI-MJHJU-NDYZJ-RPFVL'
+    });
+
     //console.log(options)
     let page = this
     let productId = options.productId
 
     let date = new Date();
     let currentDate = U.dateString(date);
-    this.setData({
+    page.setData({
       currentDate
     })
 
 
     let time = new Date();
     let currentTime = U.timeString(time);
-    this.setData({
+    page.setData({
       currentTime
     })
 
@@ -46,28 +52,28 @@ Page({
       url: `http://localhost:3000/api/v1/products/${productId}`,
       success: function(res) {
         //console.log('res', res)
-        const name = res.data.name
-        const description = res.data.description
-        const images = res.data.img_url
-        const ingredients = res.data.ingredients
-        const seller_name = res.data.seller.name
-        const seller_avatar = res.data.seller.avatar
-        const seller_id = res.data.user_id
+        const name = res.data.name;
+        const description = res.data.description;
+        const images = res.data.img_url;
+        const ingredients = res.data.ingredients;
+        const seller_name = res.data.seller.name;
+        const seller_avatar = res.data.seller.avatar;
+        const seller_id = res.data.user_id;
 
-        // locations
+        // product location
         const lat = res.data.location_lat;
         const long = res.data.location_long;
 
         page.setData({
-          name: name,
-          description: description,
-          ingredients: ingredients,
-          images: images,
-          seller_name: seller_name,
-          seller_avatar: seller_avatar,
-          seller_id: seller_id,
-          lat: lat,
-          long: long,
+          name,
+          description,
+          ingredients,
+          images,
+          seller_name,
+          seller_avatar,
+          seller_id,
+          lat,
+          long,
           mk: [{
             latitude: lat,
             longitude: long,
@@ -75,6 +81,33 @@ Page({
             height: 40
           }]
         });
+
+        // get current user location
+        wx.getLocation({
+          type: 'wgs84',
+          success: function (res) {
+            const c_lat = res.latitude;
+            const c_long = res.longitude;
+            const speed = res.speed;
+            const accuracy = res.accuracy;
+            page.setData({ c_lat, c_long, speed, accuracy });
+
+            // calculate distance
+            qqmapsdk.calculateDistance({
+              from: `${page.data.c_lat},${page.data.c_long}`, 
+              to: `${page.data.lat},${page.data.long}`, 
+              success: function (res) {
+                const distance = res.result.elements[0].distance / 1000;
+                page.setData({distance});
+              },
+              fail: function (error) {
+                console.error(error);
+              }
+            });
+
+          }
+        });
+
         wx.hideToast();
       }
 

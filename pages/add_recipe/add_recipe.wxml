@@ -62,7 +62,7 @@
 
     <view class="section">
       <label class="h2-yellow" for="name">Pick-up location:</label>
-      <input class="yellow-input" name='location' placeholder='199, Taikang East Road'></input>
+      <input bindtap="chooseLocation" class="yellow-input p" name='name'>{{name}}</input>
     </view>
 
     <view class="section">
