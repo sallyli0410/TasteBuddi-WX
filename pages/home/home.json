@@ -1,3 +1,4 @@
 {
-  "usingComponents": {}
+  "usingComponents": {"search-box": "/components/search-box/search-box"
+  }
 }
