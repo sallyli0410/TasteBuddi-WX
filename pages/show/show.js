@@ -19,7 +19,7 @@ Page({
     one_1: '',
     two_1: ''
   },
- 
+
 
   /**
    * Lifecycle function--Called when page load
@@ -34,7 +34,7 @@ Page({
     this.setData({
       currentDate
     })
-    
+
 
     let time = new Date();
     let currentTime = U.timeString(time);
@@ -57,7 +57,7 @@ Page({
         // locations
         const lat = res.data.location_lat;
         const long = res.data.location_long;
-        
+
         page.setData({
           name: name,
           description: description,
@@ -155,6 +155,7 @@ Page({
     let product_id = this.data.product_id;
     //!IMPORTANT! user_id is the buyer's user_id
     let user_id = app.globalData.userId
+    console.log(e.detail.value)
 
     let request = {
       request: {
@@ -189,14 +190,14 @@ Page({
   bindDateChange: function(e) {
     console.log('picker date value', e.detail.value)
     this.setData({
-      date: e.detail.value
+      currentDate: e.detail.value,
     })
   },
 
   bindTimeChange: function(e) {
     console.log('picker time value', e.detail.value)
     this.setData({
-      time: e.detail.value
+      currentTime: e.detail.value
     })
   },
 

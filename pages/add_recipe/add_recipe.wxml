@@ -17,38 +17,58 @@
     <view class="section">
       <label class="h2-yellow" for="name">Ingredients</label>
       <view class="ingredients-box">
-        <input class="yellow-input" name='ingredients'></input>
+        <input class="yellow-input" name='ingredients' placeholder="Fish"></input>
       </view>
     </view>
 
 
-    <view class="section">
-      <label class="h2-yellow">Start Date:\n</label>
-      <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindStartDateChange">
-        <view class=".date-picker-yellow ">
-          <text class="p">{{start_date}}</text>
+    <!-- <view class="section">
+     <label class="h2-yellow" for="name">Start Date</label>
+      <view class="date-picker-yellow">
+        <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
+          <text class="p">{{currentDate}}</text>
+        <view class="data">
+          <input name="currentDate" value="{{currentDate}}">{{currentDate}}</input>
         </view>
-      </picker>
+        </picker>
+      </view>
     </view>
 
     <view class="section">
-      <label class="h2-yellow">End Date:\n</label>
-      <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindEndDateChange">
-        <view class=".date-picker-yellow">
-          <text class="p">{{end_date}}</text>
+      <label class="h2-yellow">Pick up time start:</label>
+        <view class="date-picker-yellow">
+      <picker mode="time" value="{{time}}" start="{{currentStartTime}}" end="24:00" bindchange="bindStartTimeChange">
+          <text class="p">{{currentStartTime}}</text>
+
+        <view class="data">
+          <input name="currentStartTime" value="{{currentStartTime}}">{{currentStartTime}}</input>
         </view>
       </picker>
+        </view>
     </view>
+
+    <view class="section">
+      <label class="h2-yellow">Pick up time end:</label>
+        <view class="date-picker-yellow">
+      <picker mode="time" value="{{time}}" start="{{currentEndTime}}" end="24:00" bindchange="bindEndTimeChange">
+          <text class="p">{{currentEndTime}}</text>
+          <view class="data">
+          <input name="currentEndTime" value="{{currentEndTime}}">{{currentEndTime}}</input>
+        </view>
+      </picker>
+      </view>
+    </view> -->
+
 
     <view class="section">
       <label class="h2-yellow" for="name">Pick-up location:</label>
-      <input class="yellow-input" name='name' placeholder='199, Taikang East Road'></input>
+      <input class="yellow-input" name='location' placeholder='199, Taikang East Road'></input>
     </view>
 
     <view class="section">
       <label class="h2-yellow" for="image">Images:</label>
-      <image class="upload-button" src="/images/img_upload.png" mode="aspectFit" bindtap="chooseImage"></image>
-      <!-- <button type='default' bindtap="chooseImage" wx:if="{{images.length < 5}}">Select up to 5 images</button> -->
+      <image class="upload-button" src="/images/img_upload.png" mode="aspectFit" bindtap="takePhoto"></image>
+      <!-- <button type='default' bindtap="takePhoto" wx:if="{{images.length < 5}}">Select up to 5 images</button> -->
     </view>
 
     <view class="section">
@@ -61,9 +81,10 @@
     </view>
 
     <view class="section">
-        <button formType='submit' bindtap="takePhoto" class='submit-button'>
+        <button formType='submit' class='submit-button'>
           <text class="h2">Submit</text>
         </button>
     </view>
+
   </form>
 </view>

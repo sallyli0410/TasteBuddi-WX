@@ -2,7 +2,7 @@
 import { $init, $digest } from '../../utils/common.util';
 const app = getApp()
 const AV = require('../../utils/av-weapp-min.js');
-
+const U = require('../../utils/util.js')
 
 Page({
 
@@ -10,8 +10,8 @@ Page({
    * Page initial data
    */
   data: {
-    currentDate: new Date().getTime(),
-    images: []
+    images: [],
+    url: []
   },
 
   /**
@@ -20,37 +20,86 @@ Page({
 
   formSubmit: function(event){
     console.log(event.detail.value)
-    console.log(this.data.images)
+    const
+    data_hash = event.detail.value
+    const name = data_hash.name
+    const description = data_hash.description
+    const ingredients = data_hash.ingredients
+    const location = data_hash.location
+    const image = this.data.url[0]
 
-    // if ( event.detail.value.item.length != 5 ){
-    //   wx.reLaunch({
-    //     url: '../chef-sign-up/chef-sign-up'
-    //   })
-    // } else {
-    //   /* change chef data */
-    //   wx.reLaunch({
-    //     url: '../home/home'
-    //   })
-    // }
+    let request_product = {
+
+      request: {
+        name: name,
+        description: description
+      }
+    }
+    // console.log(this.data.images)
+    // console.log(this.data.start_date)
+
+    // let page = this;
+    // let date = this.data.currentDate;
+    // let time = this.data.time;
+    // let product_id = this.data.product_id;
+    // //!IMPORTANT! user_id is the buyer's user_id
+    // let user_id = app.globalData.userId
+
+    // let request = {
+
+    //   request: {
+    //     date: date,
+    //     time: time,
+    //     product_id: product_id,
+    //     user_id: user_id,
+    //     status: 0
+    //   }
+    // };
   },
 
-  bindStartDateChange: function(e) {
-    console.log('picker send selection modified. The carry value is ', e.detail.value)
+  bindStartTimeChange: function(e) {
+    let page = this;
+    console.log('picker time value', e.detail.value)
     this.setData({
-      start_date: e.detail.value
+      currentStartTime: e.detail.value
     })
   },
 
-  bindEndDateChange: function(e) {
-    console.log('picker send selection modified. The carry value is ', e.detail.value)
+  bindEndTimeChange: function(e) {
+    console.log('picker time value', e.detail.value)
     this.setData({
-      end_date: e.detail.value
+      currentEndTime: e.detail.value
+    })
+  },
+
+  bindDateChange: function(e) {
+    console.log('picker date value', e.detail.value)
+    this.setData({
+      currentDate: e.detail.value,
     })
   },
 
   onLoad(options) {
     $init(this)
     console.log(this.data.currentDate)
+
+    let date = new Date();
+    let currentDate = U.dateString(date);
+    this.setData({
+      currentDate
+    })
+
+    let startTime = new Date();
+    let currentStartTime = U.timeString(startTime);
+    this.setData({
+      currentStartTime
+    })
+
+    let endTime = new Date();
+    let currentEndTime = U.timeString(endTime);
+    this.setData({
+      currentEndTime
+    })
   },
 
   chooseImage(e) {
@@ -67,13 +116,29 @@ Page({
   },
 
   takePhoto: function() {
+    let page = this;
+
+    wx.chooseImage({
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+
+      success: res => {
+        const images = this.data.images.concat(res.tempFilePaths)
+        this.data.images = images.length <= 1 ? images : images.slice(0, 1)
+        $digest(this)
+
         new AV.File('file-name', {
           blob: {
             uri: this.data.images[0],
           },
         }).save().then(
-          file => console.log(file.url())
-        ).catch(console.error);
+          file => {
+            page.data.url.push(file.url())
+            console.log('testing image', page.data.url[0])
+        }).catch(console.error);
+
+      }
+    })
 
   },
 
