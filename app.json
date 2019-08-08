@@ -34,13 +34,15 @@
       },
       {
         "pagePath": "pages/marketplace/marketplace",
-        "text": "Marketplace",
-        "iconPath": "images/shopping-basket.png",
-        "selectedIconPath": "images/shopping-basket-filled.png"
+        "text": "Discover",
+        "iconPath": "images/butter-empty.png",
+        "selectedIconPath": "images/butter-filled.png"
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "Profile"
+        "text": "Profile",
+        "iconPath": "images/user-empty.png",
+        "selectedIconPath": "images/user-filled.png"
       }
     ]
   },

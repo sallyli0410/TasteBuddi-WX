@@ -6,32 +6,40 @@
 
   <!-- Yellow product card -->
 
-  <view class="section">
-    <view class="yellow-card">
-      <view class="profile">
-        <image class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
-        <view class="p">Waiting for Jennifer to respond</view>
-      </view>
-      <view class="yellow-card-product">
-        <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" mode="aspectFill" />
-        <view data-id="{{game.id}}" class="yellow-card-product-infos" bindtap="goToShow">
-          <view class="content">
-            <view class="h2">Sauce</view>
-            <view class="p">Price</view>
-            <view class="p">Units</view>
+  <view wx:for="{{obtained}}" wx:for-item="item">
+
+    <view class="section">
+      <view class="yellow-card">
+        <view class="profile">
+          <image class="avatar" alt="avatar" src="{{item.seller_avatar}}" />
+
+          <view wx:if="{{item.status=='pending'}}" class="p">Waiting for {{item.seller_name}} to respond</view>
+          <view wx:elif="{{item.status=='accepted'}}" class="p">{{item.seller_name}} has accepted your booking request</view>
+          <view wx:else class="p">{{item.seller_name}} rejected your booking request</view>
+
+
+        </view>
+        <view class="yellow-card-product">
+          <image src="{{item.product_img}}" mode="aspectFill" />
+          <view data-id="{{item.product.id}}" class="yellow-card-product-infos">
+            <view class="content">
+              <view class="h2">{{item.product_name}}</view>
+              <view class="p">Price</view>
+              <view class="p">Units</view>
+            </view>
+            <view class="card-footer-p">
+              <view>{{item.booked_time}}</view>
+            </view>
           </view>
-          <view class="card-footer-p">
-            <view>Date</view>
+          <view>
           </view>
         </view>
-        <view>
+        <view class="rating">
+
         </view>
-      </view>
-      <view class="rating">
-      
-      </view>
-      <view class="response">
-        <text class="full-tab p" bindtap="cancel">Cancel</text>
+        <view class="response">
+          <text class="full-tab p">{{item.status}}</text>
+        </view>
       </view>
     </view>
   </view>

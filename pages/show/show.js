@@ -51,7 +51,7 @@ Page({
         console.log('res', res)
         const name = res.data.name;
         const description = res.data.description;
-        const images = res.data.img_url;
+        const image = res.data.img_url;
         const ingredients = res.data.ingredients;
         const avg_rating = res.data.avg_rating;
         const seller_name = res.data.seller.name;
@@ -66,7 +66,7 @@ Page({
           description,
           ingredients,
           avg_rating,
-          images,
+          image,
           seller_name,
           seller_avatar,
           seller_id,
