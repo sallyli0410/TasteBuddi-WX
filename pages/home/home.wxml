@@ -1,9 +1,9 @@
 <!--pages/home/home.wxml-->
 
 <!-- Search bar -->
-<view class="search-section">
+<!-- <view class="search-section">
 <search-box class="search" value="{{ value }}" placeholder="请输入搜索关键词" background="transparent" shape="round" />
-</view>
+</view> -->
 
 <!-- Hero Image -->
 <view class='swipercontent'>
