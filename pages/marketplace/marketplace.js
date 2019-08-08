@@ -8,7 +8,8 @@ Page({
   data: {
     num: 3.5,
     one_1: '',
-    two_1: ''
+    two_1: '',
+    tagsArray: []
   },
 
   /**
@@ -20,12 +21,26 @@ Page({
     wx.request({
       url: 'http://localhost:3000/api/v1/products',
       success: function(res) {
-        console.log(res)
+        console.log(22, res)
         page.setData({
           products: res.data.products
         })
+
+        let tagsArray = page.data.tagsArray
+        page.data.products.forEach(p => {
+          p.tags.forEach(t => {
+            tagsArray.push(t);
+          }
+          )
+        })
+
+        page.setData({
+          tagsArray
+        })
       }
     })
+
+
 
     this.setData({
       one_1: this.data.num,
@@ -92,4 +107,30 @@ Page({
       url: `/pages/show/show?productId=${id}`
     })
   },
+  
+  
+  filterTags: function (e) {
+    let tagValue = e.currentTarget.dataset.tag
+    let products = this.data.products
+    let filteredProducts = []
+
+    if(tagValue === 'all') {
+      this.setData({
+        products
+      })
+    } else {
+
+      products.forEach(p => {
+        if (p.tags.includes(tagValue)) {
+          filteredProducts.push(p)
+        }
+      })
+
+      this.setData({
+        products: filteredProducts
+      })
+    }
+
+  }
 })
+
