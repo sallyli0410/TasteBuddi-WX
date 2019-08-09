@@ -28,11 +28,12 @@ Page({
           var product_img = info_arr[i].img_url;
           var product_id = info_arr[i].id;
           var product_description = info_arr[i].description;
-
-          page.setData({
+          var h = {
             product_name, product_img, product_id, product_description
-          });
+          };
+          obtained.push(h);
         }
+        page.setData({obtained});  
       }
     });
   },
