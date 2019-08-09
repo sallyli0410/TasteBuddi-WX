@@ -91,5 +91,25 @@ Page({
     wx.redirectTo({
       url: '/pages/add_recipe/add_recipe'
     });
-  }
+  },
+
+  del: function (e) {
+    let page = this;
+    const userId = app.globalData.userId;
+    const product_id = e.currentTarget.dataset.id;
+    wx.request({
+      url: `https://tastebuddi.wogengapp.cn/api/v1/products/${product_id}`,
+      // url: `http://localhost:3000/api/v1/products/${product_id}`,
+      method: 'DELETE',
+      success: function (res) {
+        // reload page
+        wx.reLaunch({
+          url: '/pages/profile/profile',
+        })
+      }
+    });
+  },
+
+
+
 })

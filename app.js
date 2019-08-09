@@ -79,8 +79,6 @@ App({
 
   },
 
-  
-
   globalData: {
     userInfo: null,
     url: 'https://tastebuddi.wogengapp.cn/api/v1/'

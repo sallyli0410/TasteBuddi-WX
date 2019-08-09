@@ -49,8 +49,8 @@ Page({
       success(res) {
         console.log('this is res', res)
         console.log('succeed');
-        wx.redirectTo({
-          url: '/pages/home/home'
+        wx.reLaunch({
+          url: '/pages/profile/profile'
         });
       }
     });
@@ -136,6 +136,7 @@ Page({
       }
     })
   },
+
 
   takePhoto: function() {
     let page = this;
