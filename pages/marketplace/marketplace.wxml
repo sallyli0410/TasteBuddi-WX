@@ -8,9 +8,9 @@
 
   <!-- filter -->
   <!-- test button for filter -->
-  <view wx:for="{{tagsArray}}" wx:for-item="tag" >
+  <!-- <view wx:for="{{tagsArray}}" wx:for-item="tag" >
     <button data-tag="{{tag}}" bindtap="filterTags">{{tag}}</button>
-  </view>
+  </view> -->
 
 <!-- <button data-tag="spicy" bindtap="filterTags">spicy</button> -->
 
@@ -30,7 +30,7 @@
               <view wx:for="{{product.avg_rating}}">
                 <image class="star" src='/images/star-filled.png'></image>
               </view>
-              <view wx:for="{{5-product.avg_rating}}}">
+              <view wx:for="{{5-product.avg_rating}}">
                 <image class="star" src='/images/star-empty.png'></image>
               </view>
             </view>
