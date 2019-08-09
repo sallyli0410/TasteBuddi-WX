@@ -19,7 +19,8 @@
 button{
   margin-top:30rpx;
   width:75%;
-  background-color: white !important;
+  background-color: #EDC752 !important;
+  color:white !important;
   font-size: bold !important;
 }
 

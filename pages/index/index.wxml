@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <!-- <block class="yellow-container" wx:if="{{ !hasUserInfo }}"> -->
-<view class="yellow-container" >
-<text class="h1">Welcome to Taste Buddi</text>
+<view class="yellow-container" style="background-image:url('/images/background.jpeg');" mode="aspectFill" >
+<text class="h1-white">Welcome to Taste Buddi</text>
 <view class="content">
-<text class="h1">Bring home authentic local flavors</text>
-<text class="p">Sign in to get started</text>
+<text class="h1-white">Bring home authentic local flavors</text>
+<text class="h2-white">Sign in to get started</text>
 <button class="white-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Sign In</button>
 </view>
 </view>

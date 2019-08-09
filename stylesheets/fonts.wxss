@@ -1,7 +1,16 @@
 
+
+
 .h1{
   font-size:60rpx;
   font-weight:bold;
+}
+
+.h1-white{
+  font-size:70rpx;
+  font-weight:bolder;
+  color:white;
+  text-shadow: 0px 0px 6rpx #a9a9a9;
 }
 
 .h2{
@@ -22,11 +31,14 @@
   color:#EDC752;
 }
 
+.h2-white{
+  font-size:43rpx;
+  color:white;
+  text-shadow: 0px 0px 6rpx #a9a9a9;
+}
+
 .p{
   font-size:28rpx;
-
-  
-  font-family: 'Roboto';
-
 }
+
 
