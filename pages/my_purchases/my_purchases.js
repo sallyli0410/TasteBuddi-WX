@@ -22,7 +22,7 @@ Page({
     const userId = app.globalData.userId;
     wx.request({
       // url: `http://localhost:3000/api/v1/users/${userId}`,
-      url: `${app.globalData.url}users/${userId}`,
+      url: `http://localhost:3000/api/v1/users/64`,
       success: function (res) {
         console.log('res', res);
         var info_arr = res.data.bookings;
