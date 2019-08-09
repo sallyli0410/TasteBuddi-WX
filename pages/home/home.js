@@ -23,7 +23,7 @@ Page({
   onLoad: function (options) {
     let page = this
     wx.request({
-      url: 'http://localhost:3000/api/v1/products',
+      url: 'https://tastebuddi.wogengapp.cn/api/v1/products',
       success: function (res) {
         console.log('giggles', res),
         page.setData({

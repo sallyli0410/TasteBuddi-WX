@@ -27,7 +27,7 @@
   <view class="section">
     <text class="h2-yellow">Your Recommendations</text>
     <block style="display:flex;" wx:for="{{products}}" wx:for-item="product" data-item="{{product}}">
-    <image bindtap="goToShow" class="image-cards" alt="image-cards" src="{{product.img_url}}" mode="aspectFill" />
+    <image data-id="{{product.id}}" bindtap="goToShow" class="image-cards" alt="image-cards" src="{{product.img_url}}" mode="aspectFill" />
     </block>
   </view>
 
@@ -39,9 +39,11 @@
     </view>
   </view>
   <!-- Trending Products -->
-  <view class="section">
-    <text class="h2-yellow">Trending Products</text>
-    <image class="image-cards" alt="image-cards" src="https://images.unsplash.com/photo-1472476443507-c7a5948772fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" mode="aspectFill" />
+    <view class="section">
+    <text class="h2-yellow">Your Recommendations</text>
+    <block style="display:flex;" wx:for="{{products}}" wx:for-item="product" data-item="{{product}}">
+    <image data-id="{{product.id}}" bindtap="goToShow" class="image-cards" alt="image-cards" src="{{product.img_url}}" mode="aspectFill" />
+    </block>
 
     <!-- These are for approval: -->
     <!-- <view class="image-card">
