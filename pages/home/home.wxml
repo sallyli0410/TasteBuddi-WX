@@ -26,7 +26,7 @@
   <!-- Recommendations -->
   <view class="section">
     <text class="h2-yellow">Your Recommendations</text>
-    <block style="display:flex;" wx:for="{{products}}" wx:for-item="product" data-item="{{product}}">
+    <block style="display:flex; flex-direction: row;" wx:for="{{recommend}}" wx:for-item="product" data-item="{{product}}">
     <image data-id="{{product.id}}" bindtap="goToShow" class="image-cards" alt="image-cards" src="{{product.img_url}}" mode="aspectFill" />
     </block>
   </view>
@@ -40,10 +40,13 @@
   </view>
   <!-- Trending Products -->
     <view class="section">
-    <text class="h2-yellow">Your Recommendations</text>
-    <block style="display:flex;" wx:for="{{products}}" wx:for-item="product" data-item="{{product}}">
-    <image data-id="{{product.id}}" bindtap="goToShow" class="image-cards" alt="image-cards" src="{{product.img_url}}" mode="aspectFill" />
-    </block>
+    <text class="h2-yellow">Trending products</text>
+    <scroll-view scroll-x style="white-space: no-wrap; width: 100%;">
+      <view wx:for="{{trending}}" wx:for-item="product" data-item="{{product}}" style="display: inline-block; width: 350rpx; ">
+      <!-- <view style="background-image: url('{{product.img_url}}'); width: 300rpx; height: 300rpx; background-position: center; background-size: cover;"> -->
+        <image data-id="{{product.id}}" bindtap="goToShow" class="image-cards" alt="image-cards" src="{{product.img_url}}" mode="aspectFill" style="width: 100%;"/>
+      </view>
+    </scroll-view>
 
     <!-- These are for approval: -->
     <!-- <view class="image-card">

@@ -27,10 +27,13 @@ Page({
       success: function (res) {
         console.log('giggles', res),
         page.setData({
-          products: res.data.products
+          products: res.data.products,
+          recommend: res.data.products.slice(0,4),
+          trending: res.data.products.slice(5)
         })
       }
     })
+    console.log('sliced', page.data.products.slice(1,2))
   },
 
   /**
