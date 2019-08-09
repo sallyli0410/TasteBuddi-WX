@@ -9,14 +9,12 @@
       </swiper-item>
     </block>
   </swiper> -->
-
-<!-- <view class="dots">
+  <!-- <view class="dots">
     <block wx:for="{{imageUrls}}" wx:key="unique">
       <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
     </block>
   </view>
 </view> -->
-
 <view class="container">
   <!-- Tags -->
   <view class="section">
@@ -36,15 +34,14 @@
   <view class="section">
     <text class="h2-blue">Rating</text>
     <view class="star-container">
-      <view wx:for="{{avg_rating}}">
+      <view wx:for="{{product.avg_rating}}">
         <image class="star" src='/images/star-filled.png'></image>
       </view>
-      <view wx:for="{{5 - avg_rating}}">
+      <view wx:for="{{5-product.avg_rating}}">
         <image class="star" src='/images/star-empty.png'></image>
       </view>
     </view>
   </view>
-  
   <!-- Description -->
   <view class="section">
     <text class="h2-blue">Description</text>
@@ -63,8 +60,6 @@
     <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
     <text class="p">{{distance}}km away</text>
   </view>
-
-
   <!-- Purchase form -->
   <form bindsubmit="bindFormSubmit">
     <text class="h2-blue">Choose a pick up date:</text>
@@ -74,6 +69,9 @@
           <text class="p date">{{currentDate}}</text>
         </picker>
       </view>
+      <view class="data">
+        <input name="date" value="{{currentDate}}"/>
+      </view>
     </view>
     <view class="section">
       <text class="h2-blue">Choose a pick up time:</text>
@@ -82,11 +80,15 @@
           <text class="p date">{{currentTime}}</text>
         </picker>
       </view>
+      
+    <view class="data">
+      <input name="time" value="{{currentTime}}"/>
     </view>
-    <view class="section">
+    </view>
+    <!-- <view class="section">
       <view class="h2-blue section-title">Quantity:</view>
       <input class="blue-outline-input" name="quantity" placeholder="e.g 150g" />
-    </view>
+    </view> -->
     <view class="section">
       <button form-type="submit" class="submit-button">
         <text class="h2">Request</text>
@@ -94,5 +96,4 @@
     </view>
   </form>
 </view>
-
 <!-- bindtap="submitRequest" -->
