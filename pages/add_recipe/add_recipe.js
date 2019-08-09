@@ -18,8 +18,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   formSubmit: function (event) {
-    console.log(event.detail.value)
-    console.log(this.data.images)
     const data_hash = event.detail.value;
     let page = this;
     let name = data_hash.name;
@@ -27,8 +25,9 @@ Page({
     let lat = data_hash.lat;
     let long = data_hash.long;
     let image = page.data.url[0];
-    //!IMPORTANT! user_id is the buyer's user_id
-    let user_id = 54
+    const user_id = app.globalData.userId;
+    console.log('add_a_recipe ->', user_id)
+
     let request = {
         name: name,
         description: description,
@@ -44,7 +43,7 @@ Page({
       mask: true
     })
     wx.request({
-      url: `http://localhost:3000/api/v1/products`,
+      url: `https://tastebuddi.wogengapp.cn/api/v1/products`,
       method: 'POST',
       data: request,
       success(res) {
@@ -59,6 +58,7 @@ Page({
 
   bindStartTimeChange: function(e) {
     let page = this;
+
     console.log('picker time value', e.detail.value)
     this.setData({
       currentStartTime: e.detail.value
