@@ -33,7 +33,6 @@ Page({
         })
       }
     })
-    console.log('sliced', page.data.products.slice(1,2))
   },
 
   /**

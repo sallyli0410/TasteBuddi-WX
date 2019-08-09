@@ -103,7 +103,7 @@ Page({
     console.log(33, event)
     let id = event.currentTarget.dataset.id
     wx.navigateTo({
-      url: `${app.globalData.url}users/${id}`
+      url: `../my_purchases/my_purchases`
     })
   },
 })
