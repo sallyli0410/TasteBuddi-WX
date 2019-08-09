@@ -39,7 +39,7 @@
       <view wx:for="{{avg_rating}}">
         <image class="star" src='/images/star-filled.png'></image>
       </view>
-      <view wx:for="{{two_1}}">
+      <view wx:for="{{5 - avg_rating}}">
         <image class="star" src='/images/star-empty.png'></image>
       </view>
     </view>
@@ -56,16 +56,16 @@
       <text class="p">{{ingredient.name}}</text>
     </block>
   </view>
-  <!-- Map view -->
+  <!-- Map view
   <view class="section">
     <text class="h2-blue">Location</text>
     <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
     <text class="p">{{distance}}km away</text>
-  </view>
+  </view> -->
 
 
   <!-- Purchase form -->
-  <form bindsubmit="bindFormSubmit">
+  <!-- <form bindsubmit="bindFormSubmit">
     <text class="h2-blue">Choose a pick up date:</text>
     <view class="section">
       <view class="date-picker">
@@ -91,7 +91,7 @@
         <text class="h2">Request</text>
       </button>
     </view>
-  </form>
+  </form> -->
 </view>
 
 <!-- bindtap="submitRequest" -->

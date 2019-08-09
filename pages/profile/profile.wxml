@@ -4,7 +4,11 @@
     <image class="avatar-large" alt="avatar-large" src="{{avatar}}" mode="aspectFill"></image>
     <text class="h1">Hello {{name}}!</text>
   </view>
-  <view class="tabs">
+
+  <text class="p center">
+  Welcome to Taste Buddi, where you can discover different recipes for sauces and jams.  Taste buddi allows you to share and discover family recipes from a community of foodies. It's a platform that caters to your food curiosity and expands your pallet in your very own city! 
+  </text>
+  <!-- <view class="tabs">
     <view class="tab-section" bindtap="goToMyProducts">
       <text class="h2">See all my products</text>
       <image class="chevron-icon" src="/images/right-chevron.png"></image>
@@ -19,5 +23,5 @@
     </view>
     <view class="tab-section">
     </view>
-  </view>
+  </view> -->
 </view>

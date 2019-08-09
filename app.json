@@ -27,12 +27,6 @@
     "backgroundColor": "#EDC752",
     "list": [
       {
-        "pagePath": "pages/home/home",
-        "text": "Home",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home-filled.png"
-      },
-      {
         "pagePath": "pages/marketplace/marketplace",
         "text": "Discover",
         "iconPath": "images/butter-empty.png",
@@ -40,9 +34,9 @@
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "Profile",
-        "iconPath": "images/user-empty.png",
-        "selectedIconPath": "images/user-filled.png"
+        "text": "About Us",
+        "iconPath": "images/information.png",
+        "selectedIconPath": "images/information-filled.png"
       }
     ]
   },

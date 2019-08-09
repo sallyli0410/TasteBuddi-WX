@@ -8,9 +8,9 @@
 
   <!-- filter -->
   <!-- test button for filter -->
-  <view wx:for="{{tagsArray}}" wx:for-item="tag" >
+  <!-- <view wx:for="{{tagsArray}}" wx:for-item="tag" >
     <button data-tag="{{tag}}" bindtap="filterTags">{{tag}}</button>
-  </view>
+  </view> -->
 
 <!-- <button data-tag="spicy" bindtap="filterTags">spicy</button> -->
 
@@ -18,19 +18,19 @@
   <!-- product-cards -->
   <view class="cards-container">
     <view class="card-product" wx:for="{{products}}" wx:for-item="product" data-item="{{product}}">
-      <image class="card-icon" src="/images/heart.png" />
+      <!-- <image class="card-icon" src="/images/heart.png" /> -->
       <image src="{{product.img_url}}" mode="aspectFill" />
       <view data-id="{{product.id}}" class="card-product-infos" bindtap="goToShow">
         <view class="content">
           <view class="h2">{{product.name}}</view>
-          <view class="p">Pricing: $40.00{{product.price}}</view>
-          <view class="p">Tag:{{product.tags}}</view>
+          <!-- <view class="p">Pricing: $40.00{{product.price}}</view> -->
+          <view class="p">Tag: {{product.tags}}</view>
           <view class="p">Rating:{{rating}}
             <view class="star-container">
               <view wx:for="{{product.avg_rating}}">
                 <image class="star" src='/images/star-filled.png'></image>
               </view>
-              <view wx:for="{{two_1}}">
+              <view wx:for="{{5-product.avg_rating}}">
                 <image class="star" src='/images/star-empty.png'></image>
               </view>
             </view>

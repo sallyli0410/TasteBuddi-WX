@@ -60,7 +60,7 @@ AV.init({
           success: (res) => {
             console.log("viola", res)
             wx.switchTab({
-            url: '../home/home'
+              url: '../marketplace/marketplace'
             })
           }
         })
