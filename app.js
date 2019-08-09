@@ -6,39 +6,16 @@ const config = require('./key')
 App({
 
   onLaunch: function () {
-AV.init({
-  appId: config.lean_cloud_app_id,
-  appKey: config.lean_cloud_app_key,
-});
+  AV.init({
+    appId: config.lean_cloud_app_id,
+    appKey: config.lean_cloud_app_key,
+  });
 
-    const host = 'http://tastebuddi.wogengapp.cn/api/v1/';
-    console.log('beginning login');
-
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-    // <----------login function----------->
+  // 展示本地存储能力
+  var logs = wx.getStorageSync('logs') || []
+  logs.unshift(Date.now())
+  wx.setStorageSync('logs', logs)
     
-    wx.login({
-      success: (res) => {
-        console.log(res)
-        // insert next code here
-        wx.request({
-          url: host + 'login',
-          method: 'post',
-          data: {
-            code: res.code
-          },
-          // insert next code here
-          success: (res) => {
-            console.log(res)
-            this.globalData.userId = res.data.userId
-          }
-        })
-      }
-    })
-
   this.checkLogin();
 
   },
@@ -104,8 +81,8 @@ AV.init({
 
   globalData: {
     userInfo: null,
-    url: 'https://tastebuddi.wogengapp.cn/api/v1/'
-        // url: 'http://localhost:3000/api/v1/'
+    // url: 'https://tastebuddi.wogengapp.cn/api/v1/'
+    url: 'http://localhost:3000/api/v1/'
 
   }
 })
