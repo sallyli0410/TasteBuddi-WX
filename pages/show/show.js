@@ -13,9 +13,6 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    // num: avg_rating,
-    one_1: '',
-    two_1: ''
   },
   /**
    * Lifecycle function--Called when page load
@@ -45,7 +42,7 @@ Page({
         const description = res.data.description;
         const image = res.data.img_url;
         const ingredients = res.data.ingredients;
-        const avg_rating = res.data.avg_rating;
+        const avg_rating = Math.round(res.data.avg_rating);
         const seller_name = res.data.seller.name;
         const seller_avatar = res.data.seller.avatar;
         const seller_id = res.data.user_id;
@@ -95,10 +92,6 @@ Page({
         });
         wx.hideToast();
       }
-    })
-    this.setData({
-      // one_1: this.data.num,
-      two_1: 4 - avg_rating
     })
   },
   /**
