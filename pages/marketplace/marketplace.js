@@ -45,11 +45,14 @@ Page({
     this.randomTag();
 
 
+    randomTag: function() {
+      let page = this
+      let items = this.data.tagsArray
+      let randomTags = items[Math.floor(Math.random() * items.length)]
+      return randomTags
+    }
 
-    this.setData({
-      // one_1: this.data.num,
-      two_1: 4 - avg_rating
-    })
+
 
 
 
