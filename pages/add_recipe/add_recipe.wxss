@@ -34,3 +34,13 @@ image {
   width: 0px;
   height: 0px;
 }
+
+.location-box {
+  position: relative;
+}
+
+.location {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

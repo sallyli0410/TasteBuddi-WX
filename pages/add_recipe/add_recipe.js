@@ -17,44 +17,44 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-
-  formSubmit: function(event){
+  formSubmit: function (event) {
     console.log(event.detail.value)
-    const
-    data_hash = event.detail.value
-    const name = data_hash.name
-    const description = data_hash.description
-    const ingredients = data_hash.ingredients
-    const location = data_hash.location
-    const image = this.data.url[0]
-
-    let request_product = {
-
-      request: {
+    console.log(this.data.images)
+    const data_hash = event.detail.value;
+    let page = this;
+    let name = data_hash.name;
+    let description = data_hash.description;
+    let lat = data_hash.lat;
+    let long = data_hash.long;
+    let image = page.data.url[0];
+    //!IMPORTANT! user_id is the buyer's user_id
+    let user_id = 54
+    let request = {
         name: name,
-        description: description
+        description: description,
+        location_lat: lat,
+        location_long: long,
+        user_id: user_id,
+        img_url: image
+    };
+    wx.showToast({
+      title: 'Product Created',
+      icon: 'success',
+      duration: 2000,
+      mask: true
+    })
+    wx.request({
+      url: `http://localhost:3000/api/v1/products`,
+      method: 'POST',
+      data: request,
+      success(res) {
+        console.log('this is res', res)
+        console.log('succeed');
+        wx.redirectTo({
+          url: '/pages/home/home'
+        });
       }
-    }
-    // console.log(this.data.images)
-    // console.log(this.data.start_date)
-
-    // let page = this;
-    // let date = this.data.currentDate;
-    // let time = this.data.time;
-    // let product_id = this.data.product_id;
-    // //!IMPORTANT! user_id is the buyer's user_id
-    // let user_id = app.globalData.userId
-
-    // let request = {
-
-    //   request: {
-    //     date: date,
-    //     time: time,
-    //     product_id: product_id,
-    //     user_id: user_id,
-    //     status: 0
-    //   }
-    // };
+    });
   },
 
   bindStartTimeChange: function(e) {
