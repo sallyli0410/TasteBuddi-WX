@@ -7,14 +7,16 @@
 <button class="yellow-outline-button h2" bindtap="addRecipe">Add a Recipe</button>
 </view>
 
+<view wx:for="{{obtained}}" wx:for-item="item">
 <!-- product cards -->
-  <view class="yellow-card-short" data-id="{{product.id}}">
+<view class="section">
+  <view class="yellow-card-short" data-id="{{item.product.id}}">
     <view class="yellow-card-product">
-      <image src="{{product_img}}" mode="aspectFill" />
+      <image src="{{item.product_img}}" mode="aspectFill" />
       <view  class="yellow-card-product-infos" bindtap="goToShow">
         <view class="content">
-          <view class="h2">{{product_name}}</view>
-          <view class="p">{{product_description}}</view>
+          <view class="h2">{{item.product_name}}</view>
+          <view class="p">{{item.product_description}}</view>
         </view>
         <view class="card-footer-p">
         </view>
@@ -27,4 +29,7 @@
         <text class="decline-tab p"bindtap="delete">Delete</text>
     </view>
   </view>
+</view>
+</view>
+
 </view>
