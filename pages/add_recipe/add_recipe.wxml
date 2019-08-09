@@ -10,12 +10,12 @@
     </view>
 
     <view class="section">
-      <label class="h2-yellow" for="name">Description:</label>
+      <label class="h2-yellow" for="description">Description:</label>
       <input class="yellow-input" name='description' placeholder='Traditional Burmese fish sauce'></input>
     </view>
 
     <view class="section">
-      <label class="h2-yellow" for="name">Ingredients</label>
+      <label class="h2-yellow" for="ingredients">Ingredients</label>
       <view class="ingredients-box">
         <input class="yellow-input" name='ingredients' placeholder="Fish"></input>
       </view>
@@ -61,8 +61,14 @@
 
 
     <view class="section">
-      <label class="h2-yellow" for="name">Pick-up location:</label>
-      <input bindtap="chooseLocation" class="yellow-input p" name='name'>{{name}}</input>
+      <label class="h2-yellow" for="location">Pick-up location:</label>
+      <view bindtap="chooseLocation" class="yellow-input p location-box" name='location'>
+        <text class="location">{{name}}</text>
+      </view>
+      <view class="data">
+        <input name="lat" value="{{lat}}"/>
+        <input name="long" value="{{long}}"/>
+      </view>
     </view>
 
     <view class="section">
