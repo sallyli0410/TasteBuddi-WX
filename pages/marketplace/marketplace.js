@@ -6,6 +6,7 @@ Page({
    * Page initial data
    */
   data: {
+    // num: 3.5,
     one_1: '',
     two_1: '',
     tagsArray: ['Spicy', 'Tangy', 'Savory'],
@@ -15,7 +16,7 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     let page = this
 
     wx.request({
@@ -45,12 +46,7 @@ Page({
     this.randomTag();
 
 
-    randomTag: function() {
-      let page = this
-      let items = this.data.tagsArray
-      let randomTags = items[Math.floor(Math.random() * items.length)]
-      return randomTags
-    }
+
 
 
 
@@ -61,52 +57,52 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
-  goToShow: function(event) {
+  goToShow: function (event) {
     console.log(22, event)
     let id = event.currentTarget.dataset.id
     console.log(id)
@@ -116,28 +112,37 @@ Page({
   },
 
 
-  filterTags: function (e) {
-    let tagValue = e.currentTarget.dataset.tag
-    let products = this.data.products
-    let filteredProducts = []
+  // filterTags: function (e) {
+  //   let tagValue = e.currentTarget.dataset.tag
+  //   let products = this.data.products
+  //   let filteredProducts = []
 
-    if(tagValue === 'all') {
-      this.setData({
-        products
-      })
-    } else {
+  //   if(tagValue === 'all') {
+  //     this.setData({
+  //       products
+  //     })
+  //   } else {
 
-      products.forEach(p => {
-        if (p.tags.includes(tagValue)) {
-          filteredProducts.push(p)
-        }
-      })
+  //     products.forEach(p => {
+  //       if (p.tags.includes(tagValue)) {
+  //         filteredProducts.push(p)
+  //       }
+  //     })
 
-      this.setData({
-        products: filteredProducts
-      })
-    }
+  //     this.setData({
+  //       products: filteredProducts
+  //     })
+  //   }
 
+  // },
+
+  randomTag: function () {
+    let page = this
+    let items = this.data.tagsArray
+    let randomTags = items[Math.floor(Math.random() * items.length)]
+    return randomTags
   }
+
 })
+
 
