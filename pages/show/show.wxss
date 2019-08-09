@@ -1,6 +1,4 @@
 /* pages/show/show.wxss */
-
-
 /* Seller Card */
 .seller-card {
   width:90%;
@@ -12,14 +10,16 @@
   align-items: center;
   border-radius: 10rpx;
 }
-
 /* stars */
 .star-container{
   display:flex;
   margin-top:15rpx;
 }
-
 .star{
 height: 60rpx !important;
 width: 60rpx !important
+}
+.data{
+  height: 0;
+  width: 0;
 }
