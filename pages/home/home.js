@@ -23,7 +23,8 @@ Page({
   onLoad: function (options) {
     let page = this
     wx.request({
-      url: 'http://localhost:3000/api/v1/products',
+      // url: 'http://localhost:3000/api/v1/products',
+      url: 'https://tastebuddi.wogengapp.cn/api/v1/products',
       success: function (res) {
         console.log('giggles', res),
         page.setData({
@@ -31,6 +32,7 @@ Page({
         })
       }
     })
+    console.log(page.data.products.slice(0));
   },
 
   /**
@@ -87,9 +89,9 @@ Page({
   },
 
   goToShow: function (event) {
-    console.log(22, event)
+    console.log('showtime', event)
     let id = event.currentTarget.dataset.id
-    console.log(id)
+    console.log('id', id)
     wx.navigateTo({
       url: `/pages/show/show?productId=${id}`
     })

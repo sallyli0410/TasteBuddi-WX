@@ -50,7 +50,7 @@
 
   "permission": {
     "scope.userLocation": {
-      "desc": "Please agree to share your location"
+      "desc": "Please share your location"
     }
   },
 
