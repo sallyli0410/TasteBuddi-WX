@@ -9,43 +9,46 @@ Page({
     // num: 3.5,
     one_1: '',
     two_1: '',
-    tagsArray: []
+    tagsArray: ['Spicy', 'Tangy', 'Savory'],
+    tags: [],
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     let page = this
 
     wx.request({
       url: `${app.globalData.url}products`,
-      success: function(res) {
-        console.log(222,res)
+      success: function (res) {
+        console.log(222, res)
         page.setData({
-          products: res.data.products,
+          products: res.data.products
         })
 
-        let tagsArray = page.data.tagsArray
-        page.data.products.forEach(p => {
-          p.tags.forEach(t => {
-            tagsArray.push(t);
-          }
-          )
+        let products = page.data.products
+        for (let i = 0; i < products.length; i++) {
+          products[i].avg_rating = Math.round(products[i].avg_rating);
+        }
+
+        products.forEach(p => {
+          p['tags'] = page.randomTag();
         })
 
         page.setData({
-          tagsArray
+          products
         })
+
       }
     })
 
+    this.randomTag();
 
 
-    this.setData({
-      // one_1: this.data.num,
-      two_1: 4 - avg_rating
-    })
+
+
+
 
 
 
@@ -54,52 +57,52 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
-  goToShow: function(event) {
+  goToShow: function (event) {
     console.log(22, event)
     let id = event.currentTarget.dataset.id
     console.log(id)
@@ -109,28 +112,37 @@ Page({
   },
 
 
-  filterTags: function (e) {
-    let tagValue = e.currentTarget.dataset.tag
-    let products = this.data.products
-    let filteredProducts = []
+  // filterTags: function (e) {
+  //   let tagValue = e.currentTarget.dataset.tag
+  //   let products = this.data.products
+  //   let filteredProducts = []
 
-    if(tagValue === 'all') {
-      this.setData({
-        products
-      })
-    } else {
+  //   if(tagValue === 'all') {
+  //     this.setData({
+  //       products
+  //     })
+  //   } else {
 
-      products.forEach(p => {
-        if (p.tags.includes(tagValue)) {
-          filteredProducts.push(p)
-        }
-      })
+  //     products.forEach(p => {
+  //       if (p.tags.includes(tagValue)) {
+  //         filteredProducts.push(p)
+  //       }
+  //     })
 
-      this.setData({
-        products: filteredProducts
-      })
-    }
+  //     this.setData({
+  //       products: filteredProducts
+  //     })
+  //   }
 
+  // },
+
+  randomTag: function () {
+    let page = this
+    let items = this.data.tagsArray
+    let randomTags = items[Math.floor(Math.random() * items.length)]
+    return randomTags
   }
+
 })
+
 
