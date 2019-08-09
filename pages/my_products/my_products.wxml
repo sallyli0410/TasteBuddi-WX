@@ -10,15 +10,13 @@
 <!-- product cards -->
   <view class="yellow-card-short" data-id="{{product.id}}">
     <view class="yellow-card-product">
-      <image src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" mode="aspectFill" />
+      <image src="{{product_img}}" mode="aspectFill" />
       <view  class="yellow-card-product-infos" bindtap="goToShow">
         <view class="content">
-          <view class="h2">Sauce</view>
-          <view class="p">Price</view>
-          <view class="p">Units</view>
+          <view class="h2">{{product_name}}</view>
+          <view class="p">{{product_description}}</view>
         </view>
         <view class="card-footer-p">
-          <view>Date</view>
         </view>
       </view>
       <view>

@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 15,
+			"current": 17,
 			"list": [
 				{
 					"id": 0,
@@ -159,6 +159,20 @@
 					"id": -1,
 					"name": "market",
 					"pathName": "pages/marketplace/marketplace",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "profile page",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "purchases",
+					"pathName": "pages/my_purchases/my_purchases",
 					"scene": null
 				}
 			]
