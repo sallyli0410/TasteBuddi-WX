@@ -81,8 +81,8 @@ App({
 
   globalData: {
     userInfo: null,
-    // url: 'https://tastebuddi.wogengapp.cn/api/v1/'
-    url: 'http://localhost:3000/api/v1/'
+    url: 'https://tastebuddi.wogengapp.cn/api/v1/'
+    // url: 'http://localhost:3000/api/v1/'
 
   }
 })

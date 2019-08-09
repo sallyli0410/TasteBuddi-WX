@@ -6,10 +6,10 @@ Page({
    * Page initial data
    */
   data: {
-    // num: 3.5,
     one_1: '',
     two_1: '',
-    tagsArray: []
+    tagsArray: ['Spicy', 'Tangy', 'Savory'],
+    tags: [],
   },
 
   /**
@@ -20,25 +20,29 @@ Page({
 
     wx.request({
       url: `${app.globalData.url}products`,
-      success: function(res) {
-        console.log(222,res)
+      success: function (res) {
+        console.log(222, res)
         page.setData({
-          products: res.data.products,
+          products: res.data.products
         })
 
-        let tagsArray = page.data.tagsArray
-        page.data.products.forEach(p => {
-          p.tags.forEach(t => {
-            tagsArray.push(t);
-          }
-          )
+        let products = page.data.products
+        for (let i = 0; i < products.length; i++) {
+          products[i].avg_rating = Math.round(products[i].avg_rating);
+        }
+
+        products.forEach(p => {
+          p['tags'] = page.randomTag();
         })
 
         page.setData({
-          tagsArray
+          products
         })
+
       }
     })
+
+    this.randomTag();
 
 
 
