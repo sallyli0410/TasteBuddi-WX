@@ -1,35 +1,35 @@
 <!--pages/my_products/my_products.wxml-->
 <view class="container">
-<view class="h2">Here are all your recipes</view>
+  <view class="h2">Here are all your recipes</view>
 
-<!-- Add product button -->
-<view class="section">
-<button class="yellow-outline-button h2" bindtap="addRecipe">Add a Recipe</button>
-</view>
+  <!-- Add product button -->
+  <view class="section">
+    <button class="yellow-outline-button h2" bindtap="addRecipe">Add a Recipe</button>
+  </view>
 
-<view wx:for="{{obtained}}" wx:for-item="item">
-<!-- product cards -->
-<view class="section">
-  <view class="yellow-card-short" data-id="{{item.product.id}}">
-    <view class="yellow-card-product">
-      <image src="{{item.product_img}}" mode="aspectFill" />
-      <view  class="yellow-card-product-infos" bindtap="goToShow">
-        <view class="content">
-          <view class="h2">{{item.product_name}}</view>
-          <view class="p">{{item.product_description}}</view>
+  <view wx:for="{{obtained}}" wx:for-item="item">
+    <!-- product cards -->
+    <view class="section">
+      <view class="yellow-card-short" data-id="{{item.product.id}}">
+        <view class="yellow-card-product">
+          <image src="{{item.product_img}}" mode="aspectFill" />
+          <view class="yellow-card-product-infos" bindtap="goToShow">
+            <view class="content">
+              <view class="h2">{{item.product_name}}</view>
+              <view class="p">{{item.product_description}}</view>
+            </view>
+            <view class="card-footer-p">
+            </view>
+          </view>
+          <view>
+          </view>
         </view>
-        <view class="card-footer-p">
+        <view class="response">
+          <text class="accept-tab p" bindtap="edit">Edit</text>
+          <text data-id="{{item.product_id}}" class="decline-tab p" bindtap="del">Delete</text>
         </view>
       </view>
-      <view>
-      </view>
-    </view>
-    <view class="response">
-   <text class="accept-tab p" bindtap="edit">Edit</text>
-        <text class="decline-tab p"bindtap="delete">Delete</text>
     </view>
   </view>
-</view>
-</view>
 
 </view>

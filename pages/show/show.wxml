@@ -31,14 +31,15 @@
       <!-- <text class="p ">has x recipes</text> -->
     </view>
   </view>
+
   <!-- Ratings -->
   <view class="section">
     <text class="h2-blue">Rating</text>
     <view class="star-container">
-      <view wx:for="{{product.avg_rating}}">
+      <view wx:for="{{avg_rating}}">
         <image class="star" src='/images/star-filled.png'></image>
       </view>
-      <view wx:for="{{5-product.avg_rating}}">
+      <view wx:for="{{5-avg_rating}}">
         <image class="star" src='/images/star-empty.png'></image>
       </view>
     </view>
