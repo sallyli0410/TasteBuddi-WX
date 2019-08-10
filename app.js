@@ -16,8 +16,19 @@ App({
   logs.unshift(Date.now())
   wx.setStorageSync('logs', logs)
     
-  this.checkLogin();
+  // this.checkLogin();
+// get the user ID from local storage
+// if it exists, set it global data and redirect
+// if it does not exist, login
 
+  let userId = wx.getStorageSync("userId")
+  console.log(66, userId)
+  if (userId !== "" || undefined) {
+    this.globalData.userId = userId;
+    wx.switchTab({
+      url: 'pages/home/home',
+    })
+  }
   },
 
   getUserInfo() {
@@ -64,7 +75,13 @@ App({
                 success: (res) => {
                   that.globalData.user = res.data;
                   console.log('SUCCESS???', res)
+                  // save userID to local storage 
+                
                   that.globalData.userId = res.data.userId
+                  wx.setStorage({
+                    key: 'userId',
+                    data: res.data.userId,
+                  })
                   that.getUserInfo();
 
                 },
