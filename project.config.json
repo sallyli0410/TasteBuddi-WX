@@ -48,131 +48,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 0.5,
 			"list": [
 				{
 					"id": 0,
 					"name": "Landing Page",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Home",
 					"pathName": "pages/home/home",
 					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Marketplace",
-					"pathName": "pages/marketplace/marketplace",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Product",
-					"pathName": "pages/show/show",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Profile",
-					"pathName": "pages/profile/profile",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "My Orders",
-					"pathName": "pages/my_orders/my_orders",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "My Purchases",
-					"pathName": "pages/my_purchases/my_purchases",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "My Products",
-					"pathName": "pages/my_products/my_products",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "star-rating",
-					"pathName": "components/star-rating/star-rating",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Search-bar",
-					"pathName": "components/search-bar/search-bar",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Login",
-					"pathName": "pages/login/login",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "index",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Chef Sign Up",
-					"pathName": "pages/chef-sign-up/chef-sign-up",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "Add-recipe",
-					"pathName": "pages/add_recipe/add_recipe",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "show",
-					"pathName": "pages/show/show",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "market",
-					"pathName": "pages/marketplace/marketplace",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "profile page",
-					"pathName": "pages/profile/profile",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "purchases",
-					"pathName": "pages/my_purchases/my_purchases",
 					"scene": null
 				}
 			]

@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/home/home",
-    "pages/marketplace/marketplace",
+    "pages/index/index",
+    "pages/discover/discover",
     "pages/show/show",
-    "pages/seller/seller",
+    "pages/user/user",
     "pages/profile/profile",
-    "pages/my_products/my_products",
-    "pages/my_orders/my_orders",
-    "pages/my_purchases/my_purchases",
+    "pages/my_recipes/my_recipes",
+    "pages/my_requests_in/my_requests_in",
+    "pages/my_requests_out/my_requests_out",
     "pages/logs/logs",
     "pages/chef-sign-up/chef-sign-up",
     "pages/add_recipe/add_recipe",
@@ -33,7 +33,7 @@
         "selectedIconPath": "images/home-filled.png"
       },
       {
-        "pagePath": "pages/marketplace/marketplace",
+        "pagePath": "pages/discover/discover",
         "text": "Discover",
         "iconPath": "images/butter-empty.png",
         "selectedIconPath": "images/butter-filled.png"
@@ -49,9 +49,6 @@
 
 
   "permission": {
-    "scope.userLocation": {
-      "desc": "Please agree to share your location"
-    }
   },
 
 

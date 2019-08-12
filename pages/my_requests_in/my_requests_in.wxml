@@ -1,6 +1,6 @@
 <!--pages/my_orders/my_orders.wxml-->
 <view class="container">
-  <view class="h2">Here are all your orders</view>
+  <view class="h2">Requests to you:</view>
 
   <view wx:for="{{obtained}}" wx:for-item="item">
 
@@ -9,7 +9,7 @@
 
         <view class="profile">
           <image class="avatar" alt="avatar" src="{{item.buyer_avatar}}" />
-          <view class="p">{{item.buyer_name}} wants to purchase</view>
+          <view class="p">{{item.buyer_name}} wants</view>
         </view>
 
         <view class="yellow-card-product">
