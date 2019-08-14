@@ -8,7 +8,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    login: false,
   },
 
   /**
@@ -16,12 +16,20 @@ Page({
    */
   onLoad: function (options) {
     let page = this
-    let name = app.globalData.userInfo.nickName
-    let avatar = app.globalData.userInfo.avatarUrl
+
     console.log('userId', app.globalData.userId)
-    page.setData({
-      name: name,
-      avatar: avatar
+    
+
+    wx.getSetting({
+      success: res => {
+        console.log(res)
+        if (res.authSetting["scope.userInfo"]) {
+          page.getUserInfo()
+          page.setData({
+            login: true
+          })
+        }
+      }
     })
   },
 
@@ -74,7 +82,7 @@ Page({
 
   },
 
-  goToMyProducts: function(event){
+  goToMyRecipes: function(event){
     console.log(33, event)
     // let id = event.currentTarget.dataset.id
     // console.log(id)
@@ -82,12 +90,12 @@ Page({
     //   url: `/products/${id}/`,
     // })
     wx.navigateTo({
-      url: '../my_products/my_products',
+      url: '../my_recipes/my_recipes',
     })
   },
 
 
-   goToMyOrders: function(event){
+   goToMyRequestsIn: function(event){
     console.log(33, event)
     // let id = event.currentTarget.dataset.id
     // wx.navigateTo({
@@ -95,15 +103,44 @@ Page({
     // })
 
     wx.navigateTo({
-      url:'../my_orders/my_orders',
+      url:'../my_requests_in/my_requests_in',
     })
   },
 
-   goToMyPurchases: function(event){
+   goToMyRequestsOut: function(event){
     console.log(33, event)
     let id = event.currentTarget.dataset.id
     wx.navigateTo({
-      url: `../my_purchases/my_purchases`
+      url: `../my_requests_out/my_requests_out`
     })
   },
+
+  getUserInfo: function (e) {
+    let page = this
+    // wx.getSetting({
+    //   success: res => {
+    wx.getUserInfo({
+      success: res => {
+        app.globalData.userInfo = res.userInfo
+        const host = app.globalData.url
+        // console.log(444, host)
+        page.setData({
+          name: app.globalData.userInfo.nickName,
+          avatar: app.globalData.userInfo.avatarUrl
+        })
+        wx.request({
+          url: host + 'users/' + app.globalData.userId,
+          method: 'PUT',
+          data: {
+            wx_name: app.globalData.userInfo.nickName,
+            wx_avatar: app.globalData.userInfo.avatarUrl
+          },
+          success: (res) => {
+            console.log("viola", res)
+            page.setData({login: true})
+          }
+        })
+      }
+    })
+  }
 })

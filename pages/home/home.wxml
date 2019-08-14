@@ -25,7 +25,7 @@
 <view class="container">
   <!-- Recommendations -->
   <view class="section">
-    <text class="h2-yellow">Your recommendation</text>
+    <text class="h2-yellow">Recommendation</text>
     <scroll-view scroll-x style="width:100%; white-space:nowrap;">
       <block wx:for="{{recommend}}" wx:for-item="product" data-item="{{product}}">
         <view style="display: inline-block; width: 75%; ">
@@ -36,12 +36,12 @@
   </view>
 
   <!-- Top Chefs -->
-  <view class="section">
+  <!-- <view class="section">
     <text class="h2-yellow">Top Chefs</text>
     <view class="avatars">
       <image class="avatar-outline" alt="avatar" wx:for="{{ChefUrls}}" wx:for-item="chef" data-item="{{chef}}" src="{{chef}}" mode="aspectFill" cropping="center" />
     </view>
-  </view>
+  </view> -->
   <!-- Trending Products -->
 
   <view class="section">

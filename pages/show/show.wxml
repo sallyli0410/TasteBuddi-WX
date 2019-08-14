@@ -21,7 +21,7 @@
   <view class="section">
   </view>
   <!-- Seller -->
-  <view class="seller-card" bindtap="goToSeller">
+  <view class="seller-card">
     <image class="avatar" alt="avatar" mode="aspectFill" src="{{seller_avatar}}" />
     <view class="seller-card-infos">
       <view class="name ">
@@ -60,12 +60,13 @@
   <view class="section">
     <text class="h2-blue">Location</text>
     <map longitude="{{long}}" latitude="{{lat}}" scale="3" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
-    <text class="p">{{distance}}km away</text>
+    <!-- <text class="p">{{distance}}km away</text> -->
   </view>
   <!-- Purchase form -->
   <form bindsubmit="bindFormSubmit">
-    <text class="h2-blue">Choose a pick up date:</text>
+    <text class="h2-blue">Let's meetup!</text>
     <view class="section">
+       <text class="p">Suggest a date:</text>
       <view class="date-picker">
         <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
           <text class="p date">{{currentDate}}</text>
@@ -75,8 +76,7 @@
         <input name="date" value="{{currentDate}}"/>
       </view>
     </view>
-    <view class="section">
-      <text class="h2-blue">Choose a pick up time:</text>
+      <text class="p">Sugget a time:</text>
       <view class="date-picker">
         <picker mode="time" value="{{time}}" start="{{currentTime}}" end="24:00" bindchange="bindTimeChange">
           <text class="p date">{{currentTime}}</text>
@@ -85,7 +85,6 @@
       
     <view class="data">
       <input name="time" value="{{currentTime}}"/>
-    </view>
     </view>
     <!-- <view class="section">
       <view class="h2-blue section-title">Quantity:</view>

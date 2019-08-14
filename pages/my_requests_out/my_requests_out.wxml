@@ -1,6 +1,6 @@
 <!--pages/my_purchases/my_purchases.wxml-->
 <view class="container">
-  <view class="h2">Here are all your purchases</view>
+  <view class="h2">Your requests:</view>
 
   <!-- filter tab -->
 

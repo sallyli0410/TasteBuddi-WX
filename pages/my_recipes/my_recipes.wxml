@@ -1,6 +1,6 @@
 <!--pages/my_products/my_products.wxml-->
 <view class="container">
-  <view class="h2">Here are all your recipes</view>
+  <view class="h2">All your recipes:</view>
 
   <!-- Add product button -->
   <view class="section">

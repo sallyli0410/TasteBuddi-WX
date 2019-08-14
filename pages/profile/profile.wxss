@@ -30,3 +30,32 @@
   width: 30rpx;
 
 }
+
+/**index.wxss**/
+.yellow-container{
+  background: #EDC752;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+  padding: 30rpx 30rpx;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.content{
+  flex-direction: column;
+  display:flex;  
+  width:70%;
+}
+
+button{
+  margin-top:30rpx;
+  width:75%;
+  background-color: #EDC752 !important;
+  color:white !important;
+  font-size: bold !important;
+}
+
+

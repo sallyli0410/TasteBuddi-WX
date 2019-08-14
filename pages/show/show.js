@@ -68,28 +68,28 @@ Page({
           }]
         });
         // get current user location
-        wx.getLocation({
-          type: 'wgs84',
-          success: function (res) {
-            const c_lat = res.latitude;
-            const c_long = res.longitude;
-            const speed = res.speed;
-            const accuracy = res.accuracy;
-            page.setData({ c_lat, c_long, speed, accuracy });
-            // calculate distance
-            qqmapsdk.calculateDistance({
-              from: `${page.data.c_lat},${page.data.c_long}`,
-              to: `${page.data.lat},${page.data.long}`,
-              success: function (res) {
-                const distance = res.result.elements[0].distance / 1000;
-                page.setData({ distance });
-              },
-              fail: function (error) {
-                console.error(error);
-              }
-            });
-          }
-        });
+        // wx.getLocation({
+        //   type: 'wgs84',
+        //   success: function (res) {
+        //     const c_lat = res.latitude;
+        //     const c_long = res.longitude;
+        //     const speed = res.speed;
+        //     const accuracy = res.accuracy;
+        //     page.setData({ c_lat, c_long, speed, accuracy });
+        //     // calculate distance
+        //     qqmapsdk.calculateDistance({
+        //       from: `${page.data.c_lat},${page.data.c_long}`,
+        //       to: `${page.data.lat},${page.data.long}`,
+        //       success: function (res) {
+        //         const distance = res.result.elements[0].distance / 1000;
+        //         page.setData({ distance });
+        //       },
+        //       fail: function (error) {
+        //         console.error(error);
+        //       }
+        //     });
+        //   }
+        // });
         wx.hideToast();
       }
     })
@@ -129,7 +129,7 @@ Page({
    */
   onShareAppMessage: function () {
   },
-  goToSeller: function (event) {
+  goToUser: function (event) {
     console.log(33, event)
     // let id = event.currentTarget.dataset.id
     // wx.navigateTo({
