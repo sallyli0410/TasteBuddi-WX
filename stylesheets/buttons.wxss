@@ -3,7 +3,7 @@
   text-align: center;
   color:white;
   background-color: #4AA3AD;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
 }
 
@@ -13,7 +13,7 @@
   color: #EDC752;
   border:4rpx solid #EDC752;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .yellow-outline-button .h2 {

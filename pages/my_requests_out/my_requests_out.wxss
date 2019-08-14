@@ -1,1 +1,6 @@
 /* pages/my_purchases/my_purchases.wxss */
+
+.avatar{
+  flex-basis: 23%;
+  background: white;
+}

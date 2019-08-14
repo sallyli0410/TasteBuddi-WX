@@ -7,15 +7,15 @@
   </view>
   <view class="tabs">
     <view class="tab-section" bindtap="goToMyRecipes">
-      <text class="h2">See all your recipes</text>
+      <text class="h2">Your Recipes</text>
       <image class="chevron-icon" src="/images/right-chevron.png"></image>
     </view>
     <view class="tab-section" bindtap="goToMyRequestsIn">
-      <text class="h2">Requests to you</text>
+      <text class="h2">Requests For Your Recipes</text>
       <image class="chevron-icon" src="/images/right-chevron.png"></image>
     </view>
     <view class="tab-section" bindtap="goToMyRequestsOut">
-      <text class="h2">Your requests to others</text>
+      <text class="h2">Your Request To Others</text>
       <image class="chevron-icon" src="/images/right-chevron.png"></image>
     </view>
     <view class="tab-section">
