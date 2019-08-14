@@ -25,10 +25,10 @@
 </block>
 
 <block wx:else >
-<view class="yellow-container" style="background-image:url('/images/background.jpg');background-size: cover;" mode="aspectFill"  >
-<text class="h1-white">Create a Taste Buddi Profile</text>
+<view class="yellow-container" style="background-image:url('/images/background.gif');background-size: cover;background-position:center;" mode="aspectFill"  >
+<text class="h1-white">Join Taste Buddies</text>
 <view class="content">
-<text class="h2-white">Discover local sauce makers</text>
+<text class="h2-white">Discover a community of local sauce makers</text>
 <!-- <text class="h2-white">Sign in to get started</text> -->
 <button class="white-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Join Us!</button>
 </view>

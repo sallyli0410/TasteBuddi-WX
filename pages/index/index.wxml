@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <!-- <block class="yellow-container" wx:if="{{ !hasUserInfo }}"> -->
-<view class="yellow-container" style="background-image:url('/images/background.jpg');background-size: cover;" mode="aspectFill"  >
+<view class="yellow-container" style="background-image:url('http://bestanimations.com/Food/food-animated-gif-16.gif');background-size: cover;" mode="aspectFill"  >
 <text class="h1-white">Welcome to\nTaste Buddi</text>
 <view class="content">
 <text class="h2-white">Bring home authentic local flavors</text>
