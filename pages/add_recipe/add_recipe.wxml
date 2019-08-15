@@ -24,11 +24,10 @@
         </view>
       </view>
       <view class="ingredients-box">
-        <input class="yellow-input" bindblur="addIngredient" placeholder="Ingredient" data-index="0"></input>
+        <input class="yellow-input" name="ingredient" bindblur="addIngredient" placeholder="Ingredient" data-index="0"></input>
         <block wx:for="{{inputs}}">
           <input class="yellow-input" bindblur="addIngredient" placeholder="Ingredient" data-index="{{index}}"></input>
         </block>
-
       </view>
     </view>
 
@@ -89,14 +88,14 @@
         <image class="upload-button" src="/images/img_upload.png" mode="aspectFit" bindtap="takePhoto"></image>
       </block>
       <block wx:else>
-      <view class="section">
-      <block wx:for="{{images}}" wx:key="*this">
-        <view class="q-image-wrap">
-          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview" />
-          <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">Remove Image</view>
+        <view class="section">
+          <block wx:for="{{images}}" wx:key="*this">
+            <view class="q-image-wrap">
+              <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview" />
+              <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">Remove Image</view>
+            </view>
+          </block>
         </view>
-      </block>
-      </view>
       </block>
 
     </view>

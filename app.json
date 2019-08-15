@@ -11,8 +11,7 @@
     "pages/my_requests_out/my_requests_out",
     "pages/logs/logs",
     "pages/chef-sign-up/chef-sign-up",
-    "pages/add_recipe/add_recipe",
-    "components/search-bar/search-bar"
+    "pages/add_recipe/add_recipe"
   ],
   "window": {
     "backgroundTextStyle": "dark",
