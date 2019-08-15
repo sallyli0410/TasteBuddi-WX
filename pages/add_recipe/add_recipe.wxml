@@ -6,18 +6,29 @@
 
     <view class="section">
       <label class="h2-yellow" for="name">Name:</label>
-      <input class="yellow-input" name='name' placeholder='Nga-pi-yay'></input>
+      <input class="yellow-input" name='name' placeholder='Bechamel'></input>
     </view>
 
     <view class="section">
       <label class="h2-yellow" for="description">Description:</label>
-      <input class="yellow-input" name='description' placeholder='Traditional Burmese fish sauce'></input>
+      <input class="yellow-input" name='description' placeholder='French sauce served with pasta, vegetables, eggs or poultry'></input>
     </view>
 
     <view class="section">
-      <label class="h2-yellow" for="ingredients">Ingredients</label>
+      <view class="ingredients-label">
+        <view class="ingredients-text">
+          <label class="h2-yellow" for="ingredients">Ingredients</label>
+        </view>
+        <view class="ingredients-add">
+          <image src="../../images/add.png" bindtap="showBox" style="width: 35rpx; height: 35rpx;" />
+        </view>
+      </view>
       <view class="ingredients-box">
-        <input class="yellow-input" name='ingredients' placeholder="Fish"></input>
+        <input class="yellow-input" bindblur="addIngredient" placeholder="Ingredient" data-index="0"></input>
+        <block wx:for="{{inputs}}">
+          <input class="yellow-input" bindblur="addIngredient" placeholder="Ingredient" data-index="{{index}}"></input>
+        </block>
+
       </view>
     </view>
 
@@ -66,30 +77,39 @@
         <text class="location">{{name}}</text>
       </view>
       <view class="data">
-        <input name="lat" value="{{lat}}"/>
-        <input name="long" value="{{long}}"/>
+        <input name="lat" value="{{lat}}" />
+        <input name="long" value="{{long}}" />
       </view>
     </view>
 
     <view class="section">
       <label class="h2-yellow" for="image">Images:</label>
-      <image class="upload-button" src="/images/img_upload.png" mode="aspectFit" bindtap="takePhoto"></image>
-      <!-- <button type='default' bindtap="takePhoto" wx:if="{{images.length < 5}}">Select up to 5 images</button> -->
-    </view>
 
-    <view class="section">
+      <block wx:if="{{!url.length}}">
+        <image class="upload-button" src="/images/img_upload.png" mode="aspectFit" bindtap="takePhoto"></image>
+      </block>
+      <block wx:else>
+      <view class="section">
       <block wx:for="{{images}}" wx:key="*this">
         <view class="q-image-wrap">
           <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{index}}" bindtap="handleImagePreview" />
           <view class="q-image-remover" data-idx="{{index}}" bindtap="removeImage">Remove Image</view>
         </view>
       </block>
+      </view>
+      </block>
+
     </view>
 
+
+
+
+
+
     <view class="section">
-        <button formType='submit' class='submit-button'>
-          <text class="h2">Submit</text>
-        </button>
+      <button formType='submit' class='submit-button'>
+        <text class="h2">Submit</text>
+      </button>
     </view>
 
   </form>

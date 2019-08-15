@@ -1,10 +1,25 @@
 /* pages/marketplace/marketplace.wxss */
 
-.star-container{
-  display:flex;
+.star-container {
+  display: flex;
+  margin-top: 15rpx;
 }
 
-.star{
-height: 30rpx !important;
-width: 30rpx !important
+.star {
+  height: 30rpx !important;
+  width: 30rpx !important;
 }
+
+.tag-width{
+  width:50%;
+  padding:5rpx 0rpx;
+}
+.p-tag {
+  color: #4aa3ad;
+  border: 1px solid #4aa3ad;
+  border-radius: 5px;
+  text-align: center;
+  padding: 3rpx 6rpx;
+  width:auto;
+}
+

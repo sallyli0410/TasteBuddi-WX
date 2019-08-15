@@ -24,12 +24,11 @@
 	"libVersion": "2.7.7",
 	"appid": "wx2107e6841de7f8b0",
 	"projectname": "TasteBuddi-WX",
+	"cloudfunctionTemplateRoot": "",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -44,11 +43,10 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -75,6 +73,13 @@
 					"id": -1,
 					"name": "requests",
 					"pathName": "pages/my_requests_out/my_requests_out",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/add_recipe/add_recipe",
+					"pathName": "pages/add_recipe/add_recipe",
 					"scene": null
 				}
 			]

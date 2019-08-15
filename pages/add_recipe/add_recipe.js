@@ -4,6 +4,7 @@ const app = getApp()
 const AV = require('../../utils/av-weapp-min.js');
 const U = require('../../utils/util.js')
 
+
 Page({
 
   /**
@@ -11,7 +12,9 @@ Page({
    */
   data: {
     images: [],
-    url: []
+    url: [],
+    ingredients: [],
+    inputs: []
   },
 
   /**
@@ -19,6 +22,8 @@ Page({
    */
   formSubmit: function (event) {
     const data_hash = event.detail.value;
+    console.log(data_hash);
+    console.log(this.data.ingredients)
     let page = this;
     let name = data_hash.name;
     let description = data_hash.description;
@@ -43,7 +48,7 @@ Page({
       mask: true
     })
     wx.request({
-      url: `https://tastebuddi.wogengapp.cn/api/v1/products`,
+      url: `${app.globalData.url}products`,
       method: 'POST',
       data: request,
       success(res) {
@@ -178,6 +183,23 @@ Page({
       current: images[idx],
       urls: images,
     })
+  },
+
+  // add ingredients functions
+  addIngredient: function (e) {
+    let page = this;
+    let i = e.target.dataset.index
+    console.log('ingredient-data', e.detail.value);
+    page.data.ingredients[i] = e.detail.value;
+  },
+
+  showBox: function (e) {
+    let page = this;
+    let i = e.target.dataset.index;
+    let inputs = page.data.inputs
+    inputs.push(true)
+    page.setData({inputs})
+    console.log('display', page.data.display)
   },
 
   /**
