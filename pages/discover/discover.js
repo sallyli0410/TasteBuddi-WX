@@ -9,7 +9,7 @@ Page({
     // num: 3.5,
     one_1: '',
     two_1: '',
-    tagsArray: ['Spicy', 'Tangy', 'Savory'],
+    tagsArray: ['Vegan', 'Savory', 'Gluten Free', 'Egg Free', 'Healthy', 'Relish' ],
     tags: [],
   },
 
