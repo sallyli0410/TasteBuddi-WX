@@ -17,7 +17,7 @@ Page({
   onLoad: function (options) {
     let page = this
     wx.request({
-      url: 'https://tastebuddi.wogengapp.cn/api/v1/products',
+      url: `${app.globalData.url}products`,
       success: function (res) {
         console.log('giggles', res),
         page.setData({
