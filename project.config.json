@@ -82,6 +82,13 @@
 					"id": -1,
 					"name": "Add recipe",
 					"pathName": "pages/add_recipe/add_recipe",
+          "query": "",
+          "scene": null
+        },
+          "id": -1,
+					"name": "Discover",
+					"pathName": "pages/discover/discover",
+          "query": "",
 					"scene": null
 				}
 			]

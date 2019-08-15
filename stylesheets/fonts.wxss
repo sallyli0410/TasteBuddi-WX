@@ -7,7 +7,7 @@
   font-size:70rpx;
   font-weight:bolder;
   color:white;
-  text-shadow: 0px 0px 6rpx #000;
+  text-shadow: 0px 0px 8rpx #000;
 }
 
 .h2{

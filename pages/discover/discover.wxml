@@ -23,8 +23,10 @@
       <view data-id="{{product.id}}" class="card-product-infos" bindtap="goToShow">
         <view class="content">
           <view class="h2">{{product.name}}</view>
-          <view class="p">Tag:{{product.tags}}</view>
-          <view class="p">Rating:{{rating}}
+          <view class="tag-width">
+          <view class="p-tag">{{product.tags}}</view>
+          </view>
+          <view class="p">{{rating}}
             <view class="star-container">
               <view wx:for="{{product.avg_rating}}">
                 <image class="star" src='/images/star-filled.png'></image>
