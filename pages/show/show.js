@@ -165,7 +165,7 @@ Page({
     })
     wx.request({
       // url: `http://localhost:3000/api/v1/users/${user_id}/bookings`,
-      url: `https://tastebuddi.wogengapp.cn/api/v1/users/${user_id}/bookings`,
+      url: `${app.globalData.url}users/${user_id}/bookings`,
       method: 'POST',
       data: request,
       success() {

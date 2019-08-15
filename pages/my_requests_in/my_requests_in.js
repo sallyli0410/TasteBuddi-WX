@@ -34,7 +34,7 @@ Page({
     const userId = app.globalData.userId;
     const booking_id = e.currentTarget.dataset.id;
     wx.request({
-      url: `https://tastebuddi.wogengapp.cn/api/v1/users/${userId}/bookings/${booking_id}`,
+      url: `${app.globalData.url}users/${userId}/bookings/${booking_id}`,
       // url: `http://localhost:3000/api/v1/users/${userId}/${booking_id}`,
       method: 'PUT',
       data: { status: 'rejected' },
@@ -56,7 +56,7 @@ Page({
     console.log('my_orders -> userId', userId);
     wx.request({
       // url: `http://localhost:3000/api/v1/users/${userId}`,
-      url: `https://tastebuddi.wogengapp.cn/api/v1/users/${userId}`,
+      url: `${app.globalData.url}users/${userId}`,
       success: function (res) {
         console.log('res', res);
         var info_arr = res.data.requests;

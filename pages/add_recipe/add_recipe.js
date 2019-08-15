@@ -47,7 +47,7 @@ Page({
       mask: true
     })
     wx.request({
-      url: `https://tastebuddi.wogengapp.cn/api/v1/products`,
+      url: `${app.globalData.url}products`,
       method: 'POST',
       data: request,
       success(res) {
