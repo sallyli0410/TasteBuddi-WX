@@ -4,6 +4,7 @@ const app = getApp()
 const AV = require('../../utils/av-weapp-min.js');
 const U = require('../../utils/util.js')
 
+
 Page({
 
   /**
