@@ -18,8 +18,6 @@
 
             <view class="content">
               <view class="h2">{{item.product_name}}</view>
-              <view class="p">Price</view>
-              <view class="p">Units</view>
             </view>
             <view class="card-footer-p">
               <view>{{item.booking_date}}</view>

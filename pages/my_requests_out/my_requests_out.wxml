@@ -24,7 +24,6 @@
           <view data-id="{{item.product.id}}" class="yellow-card-product-section-infos">
             <view class="content">
               <view class="h2">{{item.product_name}}</view>
-              <view class="p">Units</view>
             </view>
             <view class="card-footer-p">
               <view>{{item.booked_time}}</view>
@@ -37,7 +36,7 @@
 
         </view>
         <view class="response">
-          <text class="full-tab p">{{item.status}}</text>
+          <text class="full-tab p">Status: {{item.status}}</text>
         </view>
       </view>
     </view>

@@ -13,8 +13,14 @@
 .h2{
   font-size:43rpx;
   font-weight:bold;
-
 }
+
+.h2-white{
+  font-size:43rpx;
+  font-weight:bold;
+  color:white;
+}
+
 
 .h2-blue{
   font-size:43rpx;

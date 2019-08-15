@@ -50,6 +50,9 @@
 
 
   "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息用于位置接口的效果"
+    }
   },
 
 
