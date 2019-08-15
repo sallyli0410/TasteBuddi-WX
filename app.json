@@ -24,13 +24,12 @@
     "custom": false,
     "color": "#000000",
     "selectedColor": "#000000",
-    "padding-top": "15rpx",
     "backgroundColor": "#EDC752",
     "list": [
       {
         "pagePath": "pages/home/home",
         "text": "Home",
-        "iconPath": "images/home.png",
+        "iconPath": "images/home-empty.png",
         "selectedIconPath": "images/home-filled.png"
       },
       {

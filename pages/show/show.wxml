@@ -64,9 +64,9 @@
   </view>
   <!-- Purchase form -->
   <form bindsubmit="bindFormSubmit">
-    <text class="h2-blue">Let's meetup!</text>
+    <text class="h2-blue">Let's Meetup!</text>
     <view class="section">
-       <text class="p">Suggest a date:</text>
+       <text class="p">Suggest a Date:</text>
       <view class="date-picker">
         <picker mode="date" value="{{date}}" start="{{currentDate}}" end="2030-08-01" bindchange="bindDateChange">
           <text class="p date">{{currentDate}}</text>
@@ -76,7 +76,7 @@
         <input name="date" value="{{currentDate}}"/>
       </view>
     </view>
-      <text class="p">Sugget a time:</text>
+      <text class="p">Sugget a Time:</text>
       <view class="date-picker">
         <picker mode="time" value="{{time}}" start="{{currentTime}}" end="24:00" bindchange="bindTimeChange">
           <text class="p date">{{currentTime}}</text>
