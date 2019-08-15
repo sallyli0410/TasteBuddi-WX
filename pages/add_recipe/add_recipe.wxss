@@ -45,15 +45,3 @@ image {
   transform: translateY(-50%);
 }
 
-.ingredients-label{
-  display: flex;
-}
-
-.ingredients-text{
-  flex: 90%;
-}
-
-.ingredients-add{
-  flex: 10%;
-  padding-top: 10rpx;
-}
