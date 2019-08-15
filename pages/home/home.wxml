@@ -25,11 +25,12 @@
 <view class="container">
   <!-- Recommendations -->
   <view class="section">
-    <text class="h2-yellow">Recommendation</text>
+    <text class="h2">Recommendation</text>
     <scroll-view scroll-x style="width:100%; white-space:nowrap;">
       <block wx:for="{{recommend}}" wx:for-item="product" data-item="{{product}}">
         <view style="display: inline-block; width: 75%; ">
           <image data-id="{{product.id}}" bindtap="goToShow" class="image-cards" alt="image-cards" src="{{product.img_url}}" mode="aspectFill" style="width: 90%;" />
+          
         </view>
       </block>
     </scroll-view>
@@ -45,7 +46,7 @@
   <!-- Trending Products -->
 
   <view class="section">
-    <text class="h2-yellow">Trending products</text>
+    <text class="h2">Trending products</text>
     <scroll-view scroll-x style="width:100%; white-space:nowrap;">
       <block wx:for="{{trending}}" wx:for-item="product" data-item="{{product}}">
         <view style="display: inline-block; width: 75%; ">
