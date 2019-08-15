@@ -7,15 +7,15 @@
   </view>
   <view class="tabs">
     <view class="tab-section" bindtap="goToMyRecipes">
-      <text class="h2">See all your recipes</text>
+      <text class="h2">Your Recipes</text>
       <image class="chevron-icon" src="/images/right-chevron.png"></image>
     </view>
     <view class="tab-section" bindtap="goToMyRequestsIn">
-      <text class="h2">Requests to you</text>
+      <text class="h2">Requests For Your Recipes</text>
       <image class="chevron-icon" src="/images/right-chevron.png"></image>
     </view>
     <view class="tab-section" bindtap="goToMyRequestsOut">
-      <text class="h2">Your requests to others</text>
+      <text class="h2">Your Request To Others</text>
       <image class="chevron-icon" src="/images/right-chevron.png"></image>
     </view>
     <view class="tab-section">
@@ -25,10 +25,10 @@
 </block>
 
 <block wx:else >
-<view class="yellow-container" style="background-image:url('/images/background.jpg');background-size: cover;" mode="aspectFill"  >
-<text class="h1-white">Create a Taste Buddi Profile</text>
+<view class="white-container" style="background-image:url('/images/background.gif');background-size: cover;background-position:center;" mode="aspectFill"  >
+<text class="h1-white">Join Taste Buddies</text>
 <view class="content">
-<text class="h2-white">Discover local sauce makers</text>
+<text class="h2-white">Discover a community of local sauce makers</text>
 <!-- <text class="h2-white">Sign in to get started</text> -->
 <button class="white-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Join Us!</button>
 </view>

@@ -48,13 +48,33 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0.5,
+			"current": 3,
 			"list": [
 				{
 					"id": 0,
 					"name": "Landing Page",
 					"pathName": "pages/home/home",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "profile",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "recipes",
+					"pathName": "pages/my_recipes/my_recipes",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "requests",
+					"pathName": "pages/my_requests_out/my_requests_out",
 					"scene": null
 				}
 			]

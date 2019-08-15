@@ -1,28 +1,20 @@
 .yellow-card {
   height: 550rpx;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   color: white;
-  background: #EDC752;
-  border-left: 4rpx solid #EDC752;
-  border-right: 4rpx solid #EDC752;
+  background: #edc752;
+  box-shadow: 0px 0px 10px #e8e8e8;
 }
 
 .yellow-card-short {
   height: 395rpx;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
   color: white;
-  background: #EDC752;
-  border-top: 4rpx solid #EDC752;
+  background: #edc752;
+  box-shadow: 0px 0px 10px #e8e8e8;
+  /* border-top: 4rpx solid #EDC752;
   border-left: 4rpx solid #EDC752;
-  border-right: 4rpx solid #EDC752;
-  
-}
-
-.profile {
-  display: flex;
-  height: 8vh;
-  padding: 20rpx;
-  align-items: center;
+  border-right: 4rpx solid #EDC752; */
 }
 
 .yellow-card-product {
@@ -31,12 +23,17 @@
   align-items: center;
   position: relative;
   height: 300rpx;
-  background:white;
-  color:black;
+  background: white;
+  color: black;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  box-shadow: 0px 0px 10px #e8e8e8;
 }
 
-.yellow-card-product image{
+
+.yellow-card-product image {
   flex-basis: 52%;
+  border-top-left-radius: 20rpx;
 }
 
 .yellow-card-product-infos {
@@ -47,6 +44,41 @@
   position: relative;
   padding-left: 30rpx;
   flex-basis: 48%;
+  border-top-right-radius: 20rpx;
+}
+
+.yellow-card-product-section {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 300rpx;
+  background: white;
+  color: black;
+}
+
+.yellow-card-product-section image {
+  flex-basis: 52%;
+  border-top-left-radius: 20rpx;
+}
+
+.yellow-card-product-section-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75%;
+  position: relative;
+  padding-left: 30rpx;
+  flex-basis: 48%;
+  border-top-right-radius: 20rpx;
+}
+
+
+.profile {
+  display: flex;
+  height: 8vh;
+  padding: 20rpx;
+  align-items: center;
 }
 
 .response {
@@ -54,21 +86,20 @@
   justify-content: space-around;
   font-weight: bold;
   text-align: center;
-  height:97rpx;
-
+  height: 97rpx;
 }
 
 .accept-tab {
-flex-basis: 50%; 
-line-height:97rpx;
+  flex-basis: 50%;
+  line-height: 97rpx;
 }
 
 .decline-tab {
   border-left: 4rpx solid white;
   flex-basis: 50%;
-  line-height:97rpx;
+  line-height: 97rpx;
 }
 
 .full-tab {
-line-height:97rpx;
+  line-height: 97rpx;
 }

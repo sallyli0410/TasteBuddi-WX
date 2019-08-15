@@ -1,7 +1,6 @@
 <!--pages/my_products/my_products.wxml-->
 <view class="container">
-  <view class="h2">All your recipes:</view>
-
+  <view class="h2">All Your Recipes</view>
   <!-- Add product button -->
   <view class="section">
     <button class="yellow-outline-button h2" bindtap="addRecipe">Add a Recipe</button>

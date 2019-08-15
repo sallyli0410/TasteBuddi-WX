@@ -15,15 +15,16 @@
     "components/search-bar/search-bar"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#EDC752",
     "navigationBarTitleText": "Taste Buddi",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "custom": false,
-    "color": "#ffffff",
-    "selectedColor": "#ffffff",
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "padding-top": "15rpx",
     "backgroundColor": "#EDC752",
     "list": [
       {
@@ -49,6 +50,9 @@
 
 
   "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息用于位置接口的效果"
+    }
   },
 
 
