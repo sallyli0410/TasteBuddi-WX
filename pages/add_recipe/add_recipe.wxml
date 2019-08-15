@@ -84,7 +84,7 @@
     <view class="section">
       <label class="h2-yellow" for="image">Images:</label>
 
-      <block wx:if="{{!url.length}}">
+      <block wx:if="{{!images.length}}">
         <image class="upload-button" src="/images/img_upload.png" mode="aspectFit" bindtap="takePhoto"></image>
       </block>
       <block wx:else>
